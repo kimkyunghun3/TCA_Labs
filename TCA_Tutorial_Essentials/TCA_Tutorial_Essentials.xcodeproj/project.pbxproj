@@ -12,6 +12,7 @@
 		58848EB22A89BA1200E9FD03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58848EB12A89BA1200E9FD03 /* Assets.xcassets */; };
 		58848EB52A89BA1200E9FD03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58848EB42A89BA1200E9FD03 /* Preview Assets.xcassets */; };
 		58848ED72A89BA5A00E9FD03 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 58848ED62A89BA5A00E9FD03 /* ComposableArchitecture */; };
+		58848EDC2A89EBCE00E9FD03 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58848EDB2A89EBCE00E9FD03 /* CounterFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		58848EAF2A89BA1100E9FD03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58848EB12A89BA1200E9FD03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58848EB42A89BA1200E9FD03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58848EDB2A89EBCE00E9FD03 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				58848EAD2A89BA1100E9FD03 /* TCA_Tutorial_EssentialsApp.swift */,
 				58848EAF2A89BA1100E9FD03 /* ContentView.swift */,
+				58848EDB2A89EBCE00E9FD03 /* CounterFeature.swift */,
 				58848EB12A89BA1200E9FD03 /* Assets.xcassets */,
 				58848EB32A89BA1200E9FD03 /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58848EDC2A89EBCE00E9FD03 /* CounterFeature.swift in Sources */,
 				58848EB02A89BA1100E9FD03 /* ContentView.swift in Sources */,
 				58848EAE2A89BA1100E9FD03 /* TCA_Tutorial_EssentialsApp.swift in Sources */,
 			);
