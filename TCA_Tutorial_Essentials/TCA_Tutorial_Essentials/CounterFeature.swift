@@ -19,6 +19,9 @@ struct CounterFeature: Reducer {
     }
 
     enum CancelID { case timer }
+
+    @Dependency(\.continuousClock) var clock
+    @Dependency(\.numberFact) var numberFact
     
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action  {
