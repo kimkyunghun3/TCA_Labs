@@ -34,6 +34,7 @@
 		58848EB12A89BA1200E9FD03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58848EB42A89BA1200E9FD03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58848EDB2A89EBCE00E9FD03 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		58848EDD2A8C3D7500E9FD03 /* TCA-Tutorial-Essentials-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-Tutorial-Essentials-Info.plist"; sourceTree = SOURCE_ROOT; };
 		640575AE2A8AC60300515399 /* TCA_Tutorial_EssentialsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCA_Tutorial_EssentialsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		640575B02A8AC60300515399 /* TCA_Tutorial_EssentialsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_Tutorial_EssentialsTests.swift; sourceTree = "<group>"; };
 		640575B82A8AFBFC00515399 /* NumberFactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactClient.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		58848EAC2A89BA1100E9FD03 /* TCA_Tutorial_Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				58848EDD2A8C3D7500E9FD03 /* TCA-Tutorial-Essentials-Info.plist */,
 				58848EAD2A89BA1100E9FD03 /* TCA_Tutorial_EssentialsApp.swift */,
 				58848EAF2A89BA1100E9FD03 /* ContentView.swift */,
 				58848EDB2A89EBCE00E9FD03 /* CounterFeature.swift */,
@@ -362,6 +364,7 @@
 				DEVELOPMENT_TEAM = MTDP4HFM7X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Tutorial-Essentials-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -391,6 +394,7 @@
 				DEVELOPMENT_TEAM = MTDP4HFM7X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Tutorial-Essentials-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
