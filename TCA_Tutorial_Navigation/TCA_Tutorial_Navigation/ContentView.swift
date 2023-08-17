@@ -9,7 +9,16 @@ struct ContentView: View {
             WithViewStore(self.store, observe: \.contacts) { viewStore in
                 List {
                     ForEach(viewStore.state) { contact in
-                        Text(contact.name)
+                        HStack {
+                            Text(contact.name)
+                            Spacer()
+                            Button {
+                                viewStore.send(.deleteButtonTapped(id: contact.id))
+                            } label: {
+                                Image(systemName: "trash")
+                                    .foregroundColor(.red)
+                            }
+                        }
                     }
                 }
                 .navigationTitle("Contacts")
@@ -24,13 +33,20 @@ struct ContentView: View {
                 }
             }
         }
-        .sheet(store: self.store.scope(state: \.$addContact, action: {
-            .addContact($0)
-        })) { store in
+        .sheet(
+            store: self.store.scope(state: \.$destination, action: { .destination($0) }),
+            state: /ContactsFeature.Destination.State.addContact,
+            action: ContactsFeature.Destination.Action.addContact
+        ) { addContactStore in
             NavigationStack {
-                AddContactView(store: store)
+                AddContactView(store: addContactStore)
             }
         }
+        .alert(
+            store: self.store.scope(state: \.$destination, action: { .destination($0) }),
+            state: /ContactsFeature.Destination.State.alert,
+            action: ContactsFeature.Destination.Action.alert
+        )
     }
 }
 
@@ -41,8 +57,8 @@ struct ContentView_Previews: PreviewProvider {
                 Contact(id: UUID(), name: "Blob"),
                 Contact(id: UUID(), name: "Blob Jr"),
                 Contact(id: UUID(), name: "Blob Sr")
-        ] ), reducer: {
-            ContactsFeature()
-        }))
+            ] ), reducer: {
+                ContactsFeature()
+            }))
     }
 }
