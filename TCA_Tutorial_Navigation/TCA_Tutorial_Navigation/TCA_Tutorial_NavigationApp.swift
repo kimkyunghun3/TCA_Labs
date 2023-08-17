@@ -11,7 +11,9 @@ import SwiftUI
 struct TCA_Tutorial_NavigationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: .init(initialState: ContactsFeature.State(), reducer: {
+                ContactsFeature()
+            }))
         }
     }
 }

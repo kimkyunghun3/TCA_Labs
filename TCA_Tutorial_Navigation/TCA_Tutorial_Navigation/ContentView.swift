@@ -1,26 +1,48 @@
-//
-//  ContentView.swift
-//  TCA_Tutorial_Navigation
-//
-//  Created by LS-MAC-00211 on 2023/08/14.
-//
-
 import SwiftUI
+import ComposableArchitecture
 
 struct ContentView: View {
+    let store: StoreOf<ContactsFeature>
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            WithViewStore(self.store, observe: \.contacts) { viewStore in
+                List {
+                    ForEach(viewStore.state) { contact in
+                        Text(contact.name)
+                    }
+                }
+                .navigationTitle("Contacts")
+                .toolbar {
+                    ToolbarItem {
+                        Button {
+                            viewStore.send(.addButtonTapped)
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+                    }
+                }
+            }
         }
-        .padding()
+        .sheet(store: self.store.scope(state: \.$addContact, action: {
+            .addContact($0)
+        })) { store in
+            NavigationStack {
+                AddContactView(store: store)
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(store: Store(initialState: ContactsFeature.State(
+            contacts: [
+                Contact(id: UUID(), name: "Blob"),
+                Contact(id: UUID(), name: "Blob Jr"),
+                Contact(id: UUID(), name: "Blob Sr")
+        ] ), reducer: {
+            ContactsFeature()
+        }))
     }
 }
