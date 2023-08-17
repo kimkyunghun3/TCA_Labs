@@ -12,10 +12,21 @@
 		58848ECC2A89BA3400E9FD03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58848ECB2A89BA3400E9FD03 /* Assets.xcassets */; };
 		58848ECF2A89BA3400E9FD03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58848ECE2A89BA3400E9FD03 /* Preview Assets.xcassets */; };
 		58848EDA2A89BA6900E9FD03 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 58848ED92A89BA6900E9FD03 /* ComposableArchitecture */; };
+		58FB79102A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB790F2A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests.swift */; };
 		640575BF2A8E2CF600515399 /* ContactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640575BE2A8E2CF600515399 /* ContactsFeature.swift */; };
 		640575C12A8E379E00515399 /* AddContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640575C02A8E379E00515399 /* AddContactFeature.swift */; };
 		640575C32A8E380A00515399 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640575C22A8E380A00515399 /* AddContactView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		58FB79112A8EE20A009C3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58848EBC2A89BA3200E9FD03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58848EC32A89BA3300E9FD03;
+			remoteInfo = TCA_Tutorial_Navigation;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		58848EC42A89BA3300E9FD03 /* TCA_Tutorial_Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCA_Tutorial_Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,6 +34,8 @@
 		58848EC92A89BA3300E9FD03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58848ECB2A89BA3400E9FD03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58848ECE2A89BA3400E9FD03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58FB790D2A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCA_Tutorial_NavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FB790F2A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_Tutorial_NavigationTests.swift; sourceTree = "<group>"; };
 		640575BE2A8E2CF600515399 /* ContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeature.swift; sourceTree = "<group>"; };
 		640575C02A8E379E00515399 /* AddContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFeature.swift; sourceTree = "<group>"; };
 		640575C22A8E380A00515399 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
@@ -37,6 +50,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58FB790A2A8EE20A009C3ED1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -44,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				58848EC62A89BA3300E9FD03 /* TCA_Tutorial_Navigation */,
+				58FB790E2A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests */,
 				58848EC52A89BA3300E9FD03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				58848EC42A89BA3300E9FD03 /* TCA_Tutorial_Navigation.app */,
+				58FB790D2A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +100,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		58FB790E2A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests */ = {
+			isa = PBXGroup;
+			children = (
+				58FB790F2A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests.swift */,
+			);
+			path = TCA_Tutorial_NavigationTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,6 +131,24 @@
 			productReference = 58848EC42A89BA3300E9FD03 /* TCA_Tutorial_Navigation.app */;
 			productType = "com.apple.product-type.application";
 		};
+		58FB790C2A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58FB79152A8EE20A009C3ED1 /* Build configuration list for PBXNativeTarget "TCA_Tutorial_NavigationTests" */;
+			buildPhases = (
+				58FB79092A8EE20A009C3ED1 /* Sources */,
+				58FB790A2A8EE20A009C3ED1 /* Frameworks */,
+				58FB790B2A8EE20A009C3ED1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58FB79122A8EE20A009C3ED1 /* PBXTargetDependency */,
+			);
+			name = TCA_Tutorial_NavigationTests;
+			productName = TCA_Tutorial_NavigationTests;
+			productReference = 58FB790D2A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -113,6 +161,10 @@
 				TargetAttributes = {
 					58848EC32A89BA3300E9FD03 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					58FB790C2A8EE20A009C3ED1 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 58848EC32A89BA3300E9FD03;
 					};
 				};
 			};
@@ -133,6 +185,7 @@
 			projectRoot = "";
 			targets = (
 				58848EC32A89BA3300E9FD03 /* TCA_Tutorial_Navigation */,
+				58FB790C2A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +197,13 @@
 			files = (
 				58848ECF2A89BA3400E9FD03 /* Preview Assets.xcassets in Resources */,
 				58848ECC2A89BA3400E9FD03 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58FB790B2A8EE20A009C3ED1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +222,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58FB79092A8EE20A009C3ED1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58FB79102A8EE20A009C3ED1 /* TCA_Tutorial_NavigationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58FB79122A8EE20A009C3ED1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58848EC32A89BA3300E9FD03 /* TCA_Tutorial_Navigation */;
+			targetProxy = 58FB79112A8EE20A009C3ED1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		58848ED02A89BA3400E9FD03 /* Debug */ = {
@@ -337,6 +413,50 @@
 			};
 			name = Release;
 		};
+		58FB79132A8EE20A009C3ED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MTDP4HFM7X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.TCA-Tutorial-NavigationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TCA_Tutorial_Navigation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TCA_Tutorial_Navigation";
+			};
+			name = Debug;
+		};
+		58FB79142A8EE20A009C3ED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MTDP4HFM7X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.TCA-Tutorial-NavigationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TCA_Tutorial_Navigation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TCA_Tutorial_Navigation";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -354,6 +474,15 @@
 			buildConfigurations = (
 				58848ED32A89BA3400E9FD03 /* Debug */,
 				58848ED42A89BA3400E9FD03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58FB79152A8EE20A009C3ED1 /* Build configuration list for PBXNativeTarget "TCA_Tutorial_NavigationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58FB79132A8EE20A009C3ED1 /* Debug */,
+				58FB79142A8EE20A009C3ED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
