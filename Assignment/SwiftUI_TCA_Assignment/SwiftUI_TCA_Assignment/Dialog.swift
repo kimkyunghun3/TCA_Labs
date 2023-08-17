@@ -1,6 +1,7 @@
 import Foundation
 
-struct Dialog: Hashable {
+struct Dialog: Hashable, Identifiable {
+    let id = UUID()
     let number: String
     let alphabet: String?
 }
@@ -17,17 +18,9 @@ extension Dialog {
             Dialog(number: "7", alphabet: "PQRS"),
             Dialog(number: "8", alphabet: "TUV"),
             Dialog(number: "9", alphabet: "WXYZ"),
-            Dialog(number: "٭", alphabet: ""),
+            Dialog(number: "✶", alphabet: ""),
             Dialog(number: "0", alphabet: "+"),
             Dialog(number: "#", alphabet: "")
         ]
-    }
-}
-
-extension Array {
-    func chunked(into size: Int) -> [[Element]] {
-        return stride(from: 0, to: count, by: size).map {
-            Array(self[$0 ..< Swift.min($0 + size, count)])
-        }
     }
 }

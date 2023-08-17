@@ -41,9 +41,13 @@ struct ContentView: View {
         self.viewStore = ViewStore(self.store, observe: { $0 })
     }
     
+    let layout: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
-        
-        let chuckedData = dialog.chunked(into: 3)
     
         VStack(spacing: 20) {
             Spacer()
@@ -55,31 +59,32 @@ struct ContentView: View {
                     Button("번호 추가") {
                         viewStore.send(.addNumberButtonTapped)
                     }
+                    .onLongPressGesture(minimumDuration: 2) {
+                        print("hello")
+                    }
                 }
             }
             Spacer()
             
-            ForEach(0..<chuckedData.count, id: \.self) { index in
-                HStack(alignment: .center, spacing: 20) {
-                    ForEach(chuckedData[index], id: \.self) { dialog in
-                        
-                        CircleView(dialog: dialog) {
-                            viewStore.send(.numberButtonTapped(dialog.number))
-                        }
+            LazyVGrid(columns: layout, spacing: 20) {
+                ForEach(dialog) { dialog in
+                    CircleView(dialog: dialog) {
+                        viewStore.send(.numberButtonTapped(dialog.number))
                     }
                 }
-            }
-            
-            HStack(spacing: 20) {
+                
+                Button("") {
+                    
+                }
+                
                 Button {
                     viewStore.send(.callButtonTapped)
                 } label: {
                     Image(systemName: "phone.fill")
                         .foregroundColor(.white)
                         .font(.largeTitle)
-                        
                 }
-                .frame(width: 70, height: 70)
+                .frame(width: 90, height: 90)
                 .background(.green)
                 .clipShape(Circle())
                 
@@ -93,8 +98,11 @@ struct ContentView: View {
                     }
                 }
             }
+            .padding([.leading, .trailing], 40)
+            .padding(.bottom, 30)
+            
+            CallTabView()
         }
-        .padding()
     }
 }
 struct ContentView_Previews: PreviewProvider {

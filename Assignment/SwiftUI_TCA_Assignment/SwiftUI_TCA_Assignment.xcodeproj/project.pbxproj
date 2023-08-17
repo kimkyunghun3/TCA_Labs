@@ -14,6 +14,7 @@
 		58FB78F42A8D9BF2009C3ED1 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB78F32A8D9BF2009C3ED1 /* Dialog.swift */; };
 		58FB78F72A8DD954009C3ED1 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 58FB78F62A8DD954009C3ED1 /* ComposableArchitecture */; };
 		58FB78F92A8DEBD1009C3ED1 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB78F82A8DEBD1009C3ED1 /* CircleView.swift */; };
+		58FB78FB2A8DF663009C3ED1 /* CallTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB78FA2A8DF663009C3ED1 /* CallTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		58FB78EC2A8D91E7009C3ED1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58FB78F32A8D9BF2009C3ED1 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		58FB78F82A8DEBD1009C3ED1 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		58FB78FA2A8DF663009C3ED1 /* CallTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				58FB78E52A8D91E4009C3ED1 /* SwiftUI_TCA_AssignmentApp.swift */,
 				58FB78E72A8D91E4009C3ED1 /* ContentView.swift */,
+				58FB78FA2A8DF663009C3ED1 /* CallTabView.swift */,
 				58FB78F82A8DEBD1009C3ED1 /* CircleView.swift */,
 				58FB78F32A8D9BF2009C3ED1 /* Dialog.swift */,
 				58FB78E92A8D91E7009C3ED1 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FB78FB2A8DF663009C3ED1 /* CallTabView.swift in Sources */,
 				58FB78E82A8D91E4009C3ED1 /* ContentView.swift in Sources */,
 				58FB78F42A8D9BF2009C3ED1 /* Dialog.swift in Sources */,
 				58FB78F92A8DEBD1009C3ED1 /* CircleView.swift in Sources */,

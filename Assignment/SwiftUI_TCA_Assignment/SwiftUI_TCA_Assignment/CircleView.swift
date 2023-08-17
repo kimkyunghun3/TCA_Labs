@@ -27,7 +27,3 @@ struct CircleView_Previews: PreviewProvider {
         CircleView(dialog: .init(number: "1", alphabet: "abc"), action: {})
     }
 }
-
-// 애니메이션
-// 크기
-// 탭바
