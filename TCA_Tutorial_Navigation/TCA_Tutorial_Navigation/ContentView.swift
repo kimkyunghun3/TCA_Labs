@@ -3,22 +3,26 @@ import ComposableArchitecture
 
 struct ContentView: View {
     let store: StoreOf<ContactsFeature>
-
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: self.store.scope(state: \.path, action: { .path($0) })) {
             WithViewStore(self.store, observe: \.contacts) { viewStore in
                 List {
                     ForEach(viewStore.state) { contact in
-                        HStack {
-                            Text(contact.name)
-                            Spacer()
-                            Button {
-                                viewStore.send(.deleteButtonTapped(id: contact.id))
-                            } label: {
-                                Image(systemName: "trash")
-                                    .foregroundColor(.red)
+        
+                        NavigationLink(state: ContactDetailFeature.State(contact: contact)) {
+                            HStack {
+                                Text(contact.name)
+                                Spacer()
+                                Button {
+                                    viewStore.send(.deleteButtonTapped(id: contact.id))
+                                } label: {
+                                    Image(systemName: "trash")
+                                        .foregroundColor(.red)
+                                }
                             }
                         }
+                        .buttonStyle(.borderless)
                     }
                 }
                 .navigationTitle("Contacts")
@@ -32,6 +36,8 @@ struct ContentView: View {
                     }
                 }
             }
+        } destination: { subStore in
+            ContactDetailView(store: subStore)
         }
         .sheet(
             store: self.store.scope(state: \.$destination, action: { .destination($0) }),
