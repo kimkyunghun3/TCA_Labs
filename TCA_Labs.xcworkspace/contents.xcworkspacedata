@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:LandMark_Tutorial/LandMark_Tutorial/LandMark_Tutorial.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Assignment/SwiftUI_TCA_Assignment/SwiftUI_TCA_Assignment.xcodeproj">
    </FileRef>
    <FileRef
