@@ -1,17 +1,14 @@
-//
-//  LandMark_TutorialApp.swift
-//  LandMark_Tutorial
-//
-//  Created by LS-MAC-00211 on 2023/08/21.
-//
-
 import SwiftUI
 
 @main
 struct LandMark_TutorialApp: App {
+    
+    @StateObject private var modelData = ModelData()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(modelData)
         }
     }
 }
