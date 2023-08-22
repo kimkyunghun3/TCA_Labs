@@ -39,7 +39,9 @@ struct CallTabView: View {
                 }
                 .tag(Tab.contact)
             
-            ContentView()
+            DialogView(store: .init(initialState: DialogFeature.State(), reducer: {
+                DialogFeature()
+            }))
                 .tabItem {
                     Image(systemName: "keyboard")
                     Text("키패드")
