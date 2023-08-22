@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Settings_Clone/Settings_Clone/Settings_Clone.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:LandMark_Tutorial/LandMark_Tutorial/LandMark_Tutorial.xcodeproj">
    </FileRef>
    <FileRef
