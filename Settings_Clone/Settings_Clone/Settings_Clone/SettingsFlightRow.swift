@@ -1,21 +1,22 @@
 import SwiftUI
 
-struct SettingsRow: View {
+struct SettingsFlightRow: View {
   var item: Settings
+  @State private var isOn: Bool = false
   
   var body: some View {
     HStack(spacing: 15) {
       image
       title
       Spacer()
-      description
+      toggle
     }
     .padding(.top, 5)
     .padding(.bottom, 5)
   }
 }
 
-private extension SettingsRow {
+private extension SettingsFlightRow {
   var image: some View {
     Image(systemName: item.imageName)
       .resizable()
@@ -32,33 +33,21 @@ private extension SettingsRow {
       .font(.callout)
   }
   
-  @ViewBuilder
-  var description: some View {
-    if let description = item.description {
-      Text(description)
-        .foregroundColor(.gray.opacity(0.9))
-        .font(.callout)
+  var toggle: some View {
+    Toggle(isOn: $isOn) {
+      
     }
   }
 }
 
-struct SettingsRow_Previews: PreviewProvider {
+struct SettingsFlightRow_Previews: PreviewProvider {
   static var previews: some View {
     VStack {
-      SettingsRow(
+      SettingsFlightRow(
         item: Settings(
-          imageName: "wifi",
-          imageColor: .blue,
-          name: "Wi-Fi",
-          description: "Eddy"
-        )
-      )
-      
-      SettingsRow(
-        item: Settings(
-          imageName: "antenna.radiowaves.left.and.right",
-          imageColor: .green,
-          name: "셀룰러"
+          imageName: "airplane",
+          imageColor: .orange,
+          name: "에어플레인 모드"
         )
       )
     }

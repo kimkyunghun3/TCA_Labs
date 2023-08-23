@@ -14,6 +14,11 @@
 		58E1E6B42A9490AF00877B66 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6B32A9490AF00877B66 /* SettingsRow.swift */; };
 		58E1E6B62A94911000877B66 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6B52A94911000877B66 /* Settings.swift */; };
 		58E1E6BA2A94920400877B66 /* SettingsProfileRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6B92A94920400877B66 /* SettingsProfileRow.swift */; };
+		58E1E6BC2A9576CA00877B66 /* SettingsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6BB2A9576CA00877B66 /* SettingsFeature.swift */; };
+		58E1E6C22A957A8D00877B66 /* SettingsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6C12A957A8D00877B66 /* SettingsDetailView.swift */; };
+		58E1E6C42A957B0900877B66 /* SettingsDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6C32A957B0900877B66 /* SettingsDetailFeature.swift */; };
+		58E1E6C72A957E7800877B66 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 58E1E6C62A957E7800877B66 /* ComposableArchitecture */; };
+		58E1E6C92A95BE7C00877B66 /* SettingsFlightRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6C82A95BE7C00877B66 /* SettingsFlightRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,10 @@
 		58E1E6B32A9490AF00877B66 /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
 		58E1E6B52A94911000877B66 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		58E1E6B92A94920400877B66 /* SettingsProfileRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileRow.swift; sourceTree = "<group>"; };
+		58E1E6BB2A9576CA00877B66 /* SettingsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFeature.swift; sourceTree = "<group>"; };
+		58E1E6C12A957A8D00877B66 /* SettingsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailView.swift; sourceTree = "<group>"; };
+		58E1E6C32A957B0900877B66 /* SettingsDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailFeature.swift; sourceTree = "<group>"; };
+		58E1E6C82A95BE7C00877B66 /* SettingsFlightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlightRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E1E6C72A957E7800877B66 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,8 +69,12 @@
 			children = (
 				58E1E67C2A943B4900877B66 /* Settings_CloneApp.swift */,
 				58E1E67E2A943B4900877B66 /* ContentView.swift */,
+				58E1E6BB2A9576CA00877B66 /* SettingsFeature.swift */,
 				58E1E6B32A9490AF00877B66 /* SettingsRow.swift */,
+				58E1E6C82A95BE7C00877B66 /* SettingsFlightRow.swift */,
 				58E1E6B92A94920400877B66 /* SettingsProfileRow.swift */,
+				58E1E6C12A957A8D00877B66 /* SettingsDetailView.swift */,
+				58E1E6C32A957B0900877B66 /* SettingsDetailFeature.swift */,
 				58E1E6B52A94911000877B66 /* Settings.swift */,
 				58E1E6802A943B4F00877B66 /* Assets.xcassets */,
 				58E1E6822A943B4F00877B66 /* Preview Content */,
@@ -92,6 +106,9 @@
 			dependencies = (
 			);
 			name = Settings_Clone;
+			packageProductDependencies = (
+				58E1E6C62A957E7800877B66 /* ComposableArchitecture */,
+			);
 			productName = Settings_Clone;
 			productReference = 58E1E6792A943B4900877B66 /* Settings_Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +137,9 @@
 				Base,
 			);
 			mainGroup = 58E1E6702A943B4900877B66;
+			packageReferences = (
+				58E1E6C52A957E7800877B66 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 58E1E67A2A943B4900877B66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,10 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E1E6C22A957A8D00877B66 /* SettingsDetailView.swift in Sources */,
 				58E1E67F2A943B4900877B66 /* ContentView.swift in Sources */,
 				58E1E6B42A9490AF00877B66 /* SettingsRow.swift in Sources */,
 				58E1E67D2A943B4900877B66 /* Settings_CloneApp.swift in Sources */,
+				58E1E6BC2A9576CA00877B66 /* SettingsFeature.swift in Sources */,
+				58E1E6C92A95BE7C00877B66 /* SettingsFlightRow.swift in Sources */,
 				58E1E6B62A94911000877B66 /* Settings.swift in Sources */,
+				58E1E6C42A957B0900877B66 /* SettingsDetailFeature.swift in Sources */,
 				58E1E6BA2A94920400877B66 /* SettingsProfileRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58E1E6C52A957E7800877B66 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58E1E6C62A957E7800877B66 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58E1E6C52A957E7800877B66 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58E1E6712A943B4900877B66 /* Project object */;
 }
