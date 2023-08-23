@@ -13,15 +13,23 @@ struct ContentView: View {
           }
           
           Section {
-            SettingsFlightRow(item: viewStore.settings.first!)
             ForEach(viewStore.settings) { setting in
-              NavigationLink(state: SettingsDetailFeature.State(name: setting.name)) {
-                SettingsRow(item: setting)
+              if setting.type == .airplane {
+                SettingsToggleRow(store: store.scope(state: \.toggleState, action: SettingsFeature.Action.toggleAction))
+              } else {
+                NavigationLink(state: SettingsDetailFeature.State(name: setting.name)) {
+                  SettingsRow(item: setting)
+                }
               }
             }
           }
         }
-        .searchable(text: viewStore.binding(get: \.searchText, send: { .textDidEdited(title: $0 )}))
+        .searchable(
+          text: viewStore.binding(
+            get: \.searchText,
+            send: { .textDidEdited(title: $0 ) }
+          )
+        )
       }
     } destination: { subStore in
       SettingsDetailView(store: subStore)
@@ -38,7 +46,9 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView(store: Store(initialState: SettingsFeature.State(settings: IdentifiedArray(Settings.dummyData)), reducer: {
+    ContentView(store: Store(initialState: SettingsFeature.State(
+      settings: IdentifiedArray(
+      uniqueElements: Settings.dummyData)), reducer: {
       SettingsFeature()
     }))
   }

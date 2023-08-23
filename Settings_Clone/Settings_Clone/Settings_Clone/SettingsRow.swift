@@ -50,7 +50,8 @@ struct SettingsRow_Previews: PreviewProvider {
           imageName: "wifi",
           imageColor: .blue,
           name: "Wi-Fi",
-          description: "Eddy"
+          description: "Eddy",
+          type: .detail
         )
       )
       
@@ -58,7 +59,8 @@ struct SettingsRow_Previews: PreviewProvider {
         item: Settings(
           imageName: "antenna.radiowaves.left.and.right",
           imageColor: .green,
-          name: "셀룰러"
+          name: "셀룰러",
+          type: .detail
         )
       )
     }

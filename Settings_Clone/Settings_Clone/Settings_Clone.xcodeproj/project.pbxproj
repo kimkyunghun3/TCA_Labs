@@ -18,7 +18,8 @@
 		58E1E6C22A957A8D00877B66 /* SettingsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6C12A957A8D00877B66 /* SettingsDetailView.swift */; };
 		58E1E6C42A957B0900877B66 /* SettingsDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6C32A957B0900877B66 /* SettingsDetailFeature.swift */; };
 		58E1E6C72A957E7800877B66 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 58E1E6C62A957E7800877B66 /* ComposableArchitecture */; };
-		58E1E6C92A95BE7C00877B66 /* SettingsFlightRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6C82A95BE7C00877B66 /* SettingsFlightRow.swift */; };
+		58E1E6C92A95BE7C00877B66 /* SettingsToggleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6C82A95BE7C00877B66 /* SettingsToggleRow.swift */; };
+		58E1E6CB2A95CBE900877B66 /* SettingsToggleFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1E6CA2A95CBE900877B66 /* SettingsToggleFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,8 @@
 		58E1E6BB2A9576CA00877B66 /* SettingsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFeature.swift; sourceTree = "<group>"; };
 		58E1E6C12A957A8D00877B66 /* SettingsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailView.swift; sourceTree = "<group>"; };
 		58E1E6C32A957B0900877B66 /* SettingsDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailFeature.swift; sourceTree = "<group>"; };
-		58E1E6C82A95BE7C00877B66 /* SettingsFlightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlightRow.swift; sourceTree = "<group>"; };
+		58E1E6C82A95BE7C00877B66 /* SettingsToggleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsToggleRow.swift; sourceTree = "<group>"; };
+		58E1E6CA2A95CBE900877B66 /* SettingsToggleFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsToggleFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,8 @@
 				58E1E67E2A943B4900877B66 /* ContentView.swift */,
 				58E1E6BB2A9576CA00877B66 /* SettingsFeature.swift */,
 				58E1E6B32A9490AF00877B66 /* SettingsRow.swift */,
-				58E1E6C82A95BE7C00877B66 /* SettingsFlightRow.swift */,
+				58E1E6C82A95BE7C00877B66 /* SettingsToggleRow.swift */,
+				58E1E6CA2A95CBE900877B66 /* SettingsToggleFeature.swift */,
 				58E1E6B92A94920400877B66 /* SettingsProfileRow.swift */,
 				58E1E6C12A957A8D00877B66 /* SettingsDetailView.swift */,
 				58E1E6C32A957B0900877B66 /* SettingsDetailFeature.swift */,
@@ -171,7 +174,8 @@
 				58E1E6B42A9490AF00877B66 /* SettingsRow.swift in Sources */,
 				58E1E67D2A943B4900877B66 /* Settings_CloneApp.swift in Sources */,
 				58E1E6BC2A9576CA00877B66 /* SettingsFeature.swift in Sources */,
-				58E1E6C92A95BE7C00877B66 /* SettingsFlightRow.swift in Sources */,
+				58E1E6CB2A95CBE900877B66 /* SettingsToggleFeature.swift in Sources */,
+				58E1E6C92A95BE7C00877B66 /* SettingsToggleRow.swift in Sources */,
 				58E1E6B62A94911000877B66 /* Settings.swift in Sources */,
 				58E1E6C42A957B0900877B66 /* SettingsDetailFeature.swift in Sources */,
 				58E1E6BA2A94920400877B66 /* SettingsProfileRow.swift in Sources */,

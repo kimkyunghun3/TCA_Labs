@@ -7,27 +7,39 @@ struct SettingsFeature: Reducer {
     @PresentationState var destination: Destination.State?
     var path = StackState<SettingsDetailFeature.State>()
     var searchText: String = ""
+    var toggleState = SettingsToggleFeature.State(
+      item: .init(
+        imageName: "airplane",
+        imageColor: .blue,
+        name: "에어플레인 모드",
+        type: .airplane
+      ),
+      toggle: false
+    )
   }
   
   enum Action: Equatable {
-    case toggleButtonTapped(id: Settings.ID)
     case destination(PresentationAction<Destination.Action>)
     case path(StackAction<SettingsDetailFeature.State, SettingsDetailFeature.Action>)
     case textDidEdited(title: String)
+    case toggleAction(SettingsToggleFeature.Action)
     
     enum Alert: Equatable {
-      case toggleChange(id: Settings.ID)
+      case change
     }
   }
   
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-      case let .toggleButtonTapped(id):
-        state.destination = .alert(.toggleChange(id: id))
+      case .toggleAction(.toggleTapped):
+        state.destination = .alert(.toggleChange())
         return .none
       case let .textDidEdited(title):
         state.searchText = title
+        return .none
+      case .destination(.presented(.alert(.change))):
+        state.toggleState.toggle.toggle()
         return .none
       case .destination:
         return .none
@@ -44,6 +56,11 @@ struct SettingsFeature: Reducer {
     }
     .forEach(\.path, action: /Action.path) {
       SettingsDetailFeature()
+    }
+    
+    Scope(state: \.toggleState, action: /Action.toggleAction) {
+      SettingsToggleFeature()
+        ._printChanges()
     }
   }
 }
@@ -65,11 +82,11 @@ extension SettingsFeature {
 }
 
 extension AlertState where Action == SettingsFeature.Action.Alert {
-  static func toggleChange(id: String) -> Self {
+  static func toggleChange() -> Self {
     Self {
       TextState("Do you want to change toggle?")
     } actions: {
-      ButtonState(role: .destructive, action: .toggleChange(id: id)) {
+      ButtonState(role: .destructive, action: .change) {
         TextState("Change")
       }
     }
