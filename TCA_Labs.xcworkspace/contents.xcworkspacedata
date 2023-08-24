@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SwiftUI_Dev_Tutorials/SwiftUI_Dev_Tutorials/SwiftUI_Dev_Tutorials.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Settings_Clone/Settings_Clone/Settings_Clone.xcodeproj">
    </FileRef>
    <FileRef
