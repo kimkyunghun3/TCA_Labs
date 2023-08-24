@@ -2,9 +2,11 @@ import SwiftUI
 
 @main
 struct SwiftUI_Dev_TutorialsApp: App {
-    var body: some Scene {
-        WindowGroup {
-          ScrumsView(scrums: DailyScrum.sampleData)
-        }
+  @State private var scrums = DailyScrum.sampleData
+  
+  var body: some Scene {
+    WindowGroup {
+      ScrumsView(scrums: $scrums)
     }
+  }
 }

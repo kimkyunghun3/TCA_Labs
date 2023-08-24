@@ -18,6 +18,8 @@
 		58D152DA2A9722B3009AEC07 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D152D92A9722B3009AEC07 /* ScrumsView.swift */; };
 		58D152DC2A9726AD009AEC07 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D152DB2A9726AD009AEC07 /* DetailView.swift */; };
 		58D152DE2A972E35009AEC07 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D152DD2A972E35009AEC07 /* DetailEditView.swift */; };
+		58D152E02A9733CD009AEC07 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D152DF2A9733CD009AEC07 /* ThemeView.swift */; };
+		58D152E22A973465009AEC07 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D152E12A973465009AEC07 /* ThemePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		58D152D92A9722B3009AEC07 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
 		58D152DB2A9726AD009AEC07 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		58D152DD2A972E35009AEC07 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
+		58D152DF2A9733CD009AEC07 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		58D152E12A973465009AEC07 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				58D152D52A972024009AEC07 /* CardView.swift */,
 				58D152D92A9722B3009AEC07 /* ScrumsView.swift */,
 				58D152DB2A9726AD009AEC07 /* DetailView.swift */,
+				58D152DF2A9733CD009AEC07 /* ThemeView.swift */,
+				58D152E12A973465009AEC07 /* ThemePicker.swift */,
 				58D152D72A972145009AEC07 /* TrailingIconLabelStyle.swift */,
 				58D152C72A971350009AEC07 /* Assets.xcassets */,
 				58D152C92A971350009AEC07 /* Preview Content */,
@@ -158,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D152E22A973465009AEC07 /* ThemePicker.swift in Sources */,
 				58D152D42A971F3E009AEC07 /* DailyScrum.swift in Sources */,
 				58D152DC2A9726AD009AEC07 /* DetailView.swift in Sources */,
 				58D152DE2A972E35009AEC07 /* DetailEditView.swift in Sources */,
@@ -166,6 +173,7 @@
 				58D152DA2A9722B3009AEC07 /* ScrumsView.swift in Sources */,
 				58D152C62A97134F009AEC07 /* MeetingView.swift in Sources */,
 				58D152C42A97134F009AEC07 /* SwiftUI_Dev_TutorialsApp.swift in Sources */,
+				58D152E02A9733CD009AEC07 /* ThemeView.swift in Sources */,
 				58D152D62A972024009AEC07 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
