@@ -4,6 +4,7 @@ enum CellType {
   case profile
   case airplane
   case detail
+  case secondDetail
 }
 
 struct Settings: Equatable, Identifiable {
@@ -31,7 +32,7 @@ struct Settings: Equatable, Identifiable {
     return name
   }
   
-  static let dummyData: [Settings] = [
+  static let first: [Settings] = [
     .init(
       imageName: "airplane",
       imageColor: .orange,
@@ -72,5 +73,32 @@ struct Settings: Equatable, Identifiable {
       description: "연결 안 됨",
       type: .detail
     )
+  ]
+  
+  static let second: [Settings] = [
+    .init(
+      imageName: "bell.badge.fill",
+      imageColor: .red,
+      name: "알림",
+      type: .secondDetail
+    ),
+    .init(
+      imageName: "speaker.wave.2.fill",
+      imageColor: .red,
+      name: "사운드 및 햅틱",
+      type: .secondDetail
+    ),
+    .init(
+      imageName: "moon.fill",
+      imageColor: .indigo,
+      name: "집중 모드",
+      type: .secondDetail
+    ),
+    .init(
+      imageName: "hourglass",
+      imageColor: .indigo,
+      name: "스크린 타임",
+      type: .secondDetail
+    ),
   ]
 }

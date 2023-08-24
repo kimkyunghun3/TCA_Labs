@@ -16,6 +16,9 @@ struct SettingsFeature: Reducer {
       ),
       toggle: false
     )
+    
+    var firstSection = IdentifiedArray(uniqueElements: Settings.first)
+    var secondSection = IdentifiedArray(uniqueElements: Settings.second)
   }
   
   enum Action: Equatable {
