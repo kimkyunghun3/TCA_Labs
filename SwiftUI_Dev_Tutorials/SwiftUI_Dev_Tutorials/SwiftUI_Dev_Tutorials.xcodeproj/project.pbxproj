@@ -99,31 +99,11 @@
 			children = (
 				58D152C32A97134F009AEC07 /* SwiftUI_Dev_TutorialsApp.swift */,
 				58D152C52A97134F009AEC07 /* MeetingView.swift */,
-				58D153012A983CC2009AEC07 /* SpeakerArc.swift */,
-				58D152EB2A98237A009AEC07 /* AVPlayer+Ding.swift */,
-				58D152E92A981E1A009AEC07 /* MeetingFooterView.swift */,
-				58D152D12A971EE6009AEC07 /* Theme.swift */,
-				58D152D32A971F3E009AEC07 /* DailyScrum.swift */,
-				58D152FF2A983A64009AEC07 /* MeetingTimerView.swift */,
-				58D152F12A982B38009AEC07 /* ScrumStore.swift */,
-				58D152DD2A972E35009AEC07 /* DetailEditView.swift */,
-				58D152D52A972024009AEC07 /* CardView.swift */,
-				58D152D92A9722B3009AEC07 /* ScrumsView.swift */,
-				58D152EF2A9826DE009AEC07 /* History.swift */,
-				58D152ED2A9825AE009AEC07 /* NewScrumSheet.swift */,
-				58D152DB2A9726AD009AEC07 /* DetailView.swift */,
-				58D153052A98541E009AEC07 /* HistoryView.swift */,
-				58D152E32A981A13009AEC07 /* MeetingHeaderView.swift */,
-				58D152E72A981C77009AEC07 /* ScrumTimer.swift */,
-				58D152E52A981BF4009AEC07 /* ScrumProgressViewStyle.swift */,
-				58D152DF2A9733CD009AEC07 /* ThemeView.swift */,
-				58D152E12A973465009AEC07 /* ThemePicker.swift */,
-				58D152FB2A982F97009AEC07 /* ErrorView.swift */,
-				58D152FD2A982FAB009AEC07 /* ErrorWrapper.swift */,
-				58D152D72A972145009AEC07 /* TrailingIconLabelStyle.swift */,
+				58D153082A985620009AEC07 /* Utils */,
+				58D153092A985628009AEC07 /* Views */,
+				58D153072A98560E009AEC07 /* Models */,
 				58D152C72A971350009AEC07 /* Assets.xcassets */,
 				58D152C92A971350009AEC07 /* Preview Content */,
-				58D153032A984A91009AEC07 /* SpeechRecognizer.swift */,
 			);
 			path = SwiftUI_Dev_Tutorials;
 			sourceTree = "<group>";
@@ -134,6 +114,50 @@
 				58D152CA2A971350009AEC07 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		58D153072A98560E009AEC07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58D152D12A971EE6009AEC07 /* Theme.swift */,
+				58D152EF2A9826DE009AEC07 /* History.swift */,
+				58D152D32A971F3E009AEC07 /* DailyScrum.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58D153082A985620009AEC07 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				58D153012A983CC2009AEC07 /* SpeakerArc.swift */,
+				58D152EB2A98237A009AEC07 /* AVPlayer+Ding.swift */,
+				58D152F12A982B38009AEC07 /* ScrumStore.swift */,
+				58D152E72A981C77009AEC07 /* ScrumTimer.swift */,
+				58D152E52A981BF4009AEC07 /* ScrumProgressViewStyle.swift */,
+				58D152FD2A982FAB009AEC07 /* ErrorWrapper.swift */,
+				58D152D72A972145009AEC07 /* TrailingIconLabelStyle.swift */,
+				58D153032A984A91009AEC07 /* SpeechRecognizer.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		58D153092A985628009AEC07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58D152E92A981E1A009AEC07 /* MeetingFooterView.swift */,
+				58D152FF2A983A64009AEC07 /* MeetingTimerView.swift */,
+				58D152DD2A972E35009AEC07 /* DetailEditView.swift */,
+				58D152D52A972024009AEC07 /* CardView.swift */,
+				58D152D92A9722B3009AEC07 /* ScrumsView.swift */,
+				58D152ED2A9825AE009AEC07 /* NewScrumSheet.swift */,
+				58D152DB2A9726AD009AEC07 /* DetailView.swift */,
+				58D153052A98541E009AEC07 /* HistoryView.swift */,
+				58D152E32A981A13009AEC07 /* MeetingHeaderView.swift */,
+				58D152DF2A9733CD009AEC07 /* ThemeView.swift */,
+				58D152E12A973465009AEC07 /* ThemePicker.swift */,
+				58D152FB2A982F97009AEC07 /* ErrorView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
