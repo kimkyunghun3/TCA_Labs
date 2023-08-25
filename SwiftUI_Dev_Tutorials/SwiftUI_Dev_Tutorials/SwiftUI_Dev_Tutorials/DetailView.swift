@@ -10,7 +10,7 @@ struct DetailView: View {
     List {
       Section {
         NavigationLink {
-          MeetingView()
+          MeetingView(scrum: $scrum)
         } label: {
           Label("Start Meeting", systemImage: "timer")
             .font(.headline)
@@ -43,6 +43,20 @@ struct DetailView: View {
       } header: {
         Text("Attendees")
       }
+      Section {
+        if scrum.history.isEmpty {
+          Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
+        }
+        ForEach(scrum.history) { history in
+          HStack {
+            Image(systemName: "calendar")
+            Text(history.date, style: .date)
+          }
+        }
+      } header: {
+        Text("History")
+      }
+
     }
     .navigationTitle(scrum.title)
     .toolbar {
@@ -70,6 +84,9 @@ struct DetailView: View {
           }
       }
     }
+    .padding()
+    .foregroundColor(scrum.theme.accentColor)
+    .navigationBarTitleDisplayMode(.inline)
   }
 }
 
