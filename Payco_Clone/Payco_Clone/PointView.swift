@@ -5,6 +5,7 @@ struct PointView: View {
     VStack(spacing: 30) {
       AccountView()
       ItemListsView()
+      EventView()
       Spacer()
     }
   }

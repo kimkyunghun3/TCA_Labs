@@ -15,6 +15,8 @@
 		581B76132A9C32D700C78908 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B76122A9C32D700C78908 /* AccountView.swift */; };
 		581B761B2A9C58A400C78908 /* ItemListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B761A2A9C58A400C78908 /* ItemListsView.swift */; };
 		581B761D2A9C5B3000C78908 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B761C2A9C5B3000C78908 /* ItemList.swift */; };
+		581B76232A9C656400C78908 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B76222A9C656400C78908 /* EventView.swift */; };
+		581B76262A9C663B00C78908 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B76252A9C663B00C78908 /* EventList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		581B76142A9C554100C78908 /* TCA_Prac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCA_Prac.xcodeproj; path = ../../../TCA_Prac/TCA_Prac/TCA_Prac.xcodeproj; sourceTree = "<group>"; };
 		581B761A2A9C58A400C78908 /* ItemListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListsView.swift; sourceTree = "<group>"; };
 		581B761C2A9C5B3000C78908 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		581B76222A9C656400C78908 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		581B76252A9C663B00C78908 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 				581B76122A9C32D700C78908 /* AccountView.swift */,
 				581B760E2A9C2D1F00C78908 /* EmptyView.swift */,
 				581B76022A9C28C200C78908 /* PointView.swift */,
+				581B76222A9C656400C78908 /* EventView.swift */,
 				581B761A2A9C58A400C78908 /* ItemListsView.swift */,
 				581B761E2A9C5B3200C78908 /* Model */,
 				581B76042A9C28C500C78908 /* Assets.xcassets */,
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				581B761C2A9C5B3000C78908 /* ItemList.swift */,
+				581B76252A9C663B00C78908 /* EventList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,7 +199,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581B76262A9C663B00C78908 /* EventList.swift in Sources */,
 				581B76132A9C32D700C78908 /* AccountView.swift in Sources */,
+				581B76232A9C656400C78908 /* EventView.swift in Sources */,
 				581B76032A9C28C200C78908 /* PointView.swift in Sources */,
 				581B760F2A9C2D1F00C78908 /* EmptyView.swift in Sources */,
 				581B76012A9C28C200C78908 /* Payco_CloneApp.swift in Sources */,
