@@ -8,19 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		581B76012A9C28C200C78908 /* Payco_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B76002A9C28C200C78908 /* Payco_CloneApp.swift */; };
-		581B76032A9C28C200C78908 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B76022A9C28C200C78908 /* ContentView.swift */; };
+		581B76032A9C28C200C78908 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B76022A9C28C200C78908 /* PointView.swift */; };
 		581B76052A9C28C500C78908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 581B76042A9C28C500C78908 /* Assets.xcassets */; };
 		581B76082A9C28C500C78908 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 581B76072A9C28C500C78908 /* Preview Assets.xcassets */; };
 		581B760F2A9C2D1F00C78908 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B760E2A9C2D1F00C78908 /* EmptyView.swift */; };
+		581B76132A9C32D700C78908 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B76122A9C32D700C78908 /* AccountView.swift */; };
+		581B761B2A9C58A400C78908 /* ItemListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B761A2A9C58A400C78908 /* ItemListsView.swift */; };
+		581B761D2A9C5B3000C78908 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B761C2A9C5B3000C78908 /* ItemList.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		581B76182A9C554100C78908 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 581B76142A9C554100C78908 /* TCA_Prac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58D153132A986FA6009AEC07;
+			remoteInfo = TCA_Prac;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		581B75FD2A9C28C200C78908 /* Payco_Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payco_Clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		581B76002A9C28C200C78908 /* Payco_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payco_CloneApp.swift; sourceTree = "<group>"; };
-		581B76022A9C28C200C78908 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		581B76022A9C28C200C78908 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 		581B76042A9C28C500C78908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		581B76072A9C28C500C78908 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		581B760E2A9C2D1F00C78908 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		581B76122A9C32D700C78908 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		581B76142A9C554100C78908 /* TCA_Prac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCA_Prac.xcodeproj; path = ../../../TCA_Prac/TCA_Prac/TCA_Prac.xcodeproj; sourceTree = "<group>"; };
+		581B761A2A9C58A400C78908 /* ItemListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListsView.swift; sourceTree = "<group>"; };
+		581B761C2A9C5B3000C78908 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +71,11 @@
 			isa = PBXGroup;
 			children = (
 				581B76002A9C28C200C78908 /* Payco_CloneApp.swift */,
+				581B76122A9C32D700C78908 /* AccountView.swift */,
 				581B760E2A9C2D1F00C78908 /* EmptyView.swift */,
-				581B76022A9C28C200C78908 /* ContentView.swift */,
+				581B76022A9C28C200C78908 /* PointView.swift */,
+				581B761A2A9C58A400C78908 /* ItemListsView.swift */,
+				581B761E2A9C5B3200C78908 /* Model */,
 				581B76042A9C28C500C78908 /* Assets.xcassets */,
 				581B76062A9C28C500C78908 /* Preview Content */,
 			);
@@ -65,9 +85,26 @@
 		581B76062A9C28C500C78908 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				581B76142A9C554100C78908 /* TCA_Prac.xcodeproj */,
 				581B76072A9C28C500C78908 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		581B76152A9C554100C78908 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				581B76192A9C554100C78908 /* TCA_Prac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		581B761E2A9C5B3200C78908 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				581B761C2A9C5B3000C78908 /* ItemList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,12 +153,28 @@
 			mainGroup = 581B75F42A9C28C200C78908;
 			productRefGroup = 581B75FE2A9C28C200C78908 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 581B76152A9C554100C78908 /* Products */;
+					ProjectRef = 581B76142A9C554100C78908 /* TCA_Prac.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				581B75FC2A9C28C200C78908 /* Payco_Clone */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		581B76192A9C554100C78908 /* TCA_Prac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TCA_Prac.app;
+			remoteRef = 581B76182A9C554100C78908 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		581B75FB2A9C28C200C78908 /* Resources */ = {
@@ -140,9 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				581B76032A9C28C200C78908 /* ContentView.swift in Sources */,
+				581B76132A9C32D700C78908 /* AccountView.swift in Sources */,
+				581B76032A9C28C200C78908 /* PointView.swift in Sources */,
 				581B760F2A9C2D1F00C78908 /* EmptyView.swift in Sources */,
 				581B76012A9C28C200C78908 /* Payco_CloneApp.swift in Sources */,
+				581B761D2A9C5B3000C78908 /* ItemList.swift in Sources */,
+				581B761B2A9C58A400C78908 /* ItemListsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

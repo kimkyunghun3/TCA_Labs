@@ -23,7 +23,7 @@ struct Payco_CloneApp: App {
           }
           .tag(Tab.benefit)
         
-        ContentView()
+        PointView()
           .tabItem {
             Image(systemName: "p.circle")
             Text("포인트")
@@ -39,7 +39,7 @@ struct Payco_CloneApp: App {
         
         EmptyView()
           .tabItem {
-            Image(systemName: "sterlingsign")
+            Image(systemName: "chart.line.uptrend.xyaxis")
             Text("금융")
           }
           .tag(Tab.finance)
