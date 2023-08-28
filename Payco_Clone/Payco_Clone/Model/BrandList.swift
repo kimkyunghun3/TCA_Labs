@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-enum EventList: String, Identifiable {
+enum BrandList: String, Identifiable {
   case gmarket = "지마켓"
   case musinsa = "무신사"
   case industrialBank = "IBK"
@@ -76,10 +76,62 @@ enum EventList: String, Identifiable {
     case .gsTheFresh: return .teal
     }
   }
+  
+  var image: String {
+    switch self {
+    case .gmarket: return "GS_25"
+    case .musinsa: return "Musinsa"
+    case .industrialBank: return "IBK"
+    case .gs25: return "GS_25"
+    case .megaCoffe: return "Starbucks"
+    case .akPlaza: return "AKPlaza"
+    case .eduwill: return "Eduwill"
+    case .twentyNineCM: return "twentyNineCM"
+    case .gsTheFresh: return "GS_25"
+    }
+  }
+  
+  var condition: String {
+    switch self {
+    case .gmarket:
+      return "Gmarket 결제 시"
+    case .musinsa:
+      return "무신사 결제 시"
+    case .industrialBank:
+      return "IBK 계좌 페키오 충전 시"
+    case .gs25:
+      return "GS25 결제 시 건당"
+    case .megaCoffe:
+      return "스타벅스 결제 시"
+    case .akPlaza:
+      return "AK 플라자 충전 시"
+    case .eduwill:
+      return "에듀윌 결제 시"
+    case .twentyNineCM:
+      return "29CM 충전시"
+    case .gsTheFresh:
+      return "GS the fresh 결제 시"
+    }
+  }
+  
+  var description: String {
+    switch self {
+    case .gmarket:
+      return "2% 할인"
+    case .musinsa, .twentyNineCM:
+      return "2% 할인"
+    case .industrialBank:
+      return "5,000P 적립"
+    case .gs25, .gsTheFresh, .megaCoffe, .akPlaza:
+      return "5% 할인"
+    case .eduwill:
+      return "5,000원 할인"
+    }
+  }
 }
 
-extension EventList {
-  static let data: [EventList] = [
+extension BrandList {
+  static let data: [BrandList] = [
     .gmarket, .musinsa, .industrialBank,
     .gs25, .megaCoffe, .akPlaza,
     .eduwill, .twentyNineCM, .gsTheFresh

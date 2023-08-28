@@ -8,7 +8,7 @@ struct EventView: View {
 
 struct Carousel: View {
   @State var currentTabIndex = 0
-  @State var eventLists = EventList.data
+  @State var eventLists = BrandList.data
   
   var body: some View {
     TabView(selection: $currentTabIndex) {
