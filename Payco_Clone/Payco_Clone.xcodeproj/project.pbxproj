@@ -20,6 +20,7 @@
 		581B762A2A9C7CD200C78908 /* BenefitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B76292A9C7CD200C78908 /* BenefitView.swift */; };
 		58E14AA52A9D846500A90970 /* RewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E14AA42A9D846500A90970 /* RewardView.swift */; };
 		58E14AA82A9D859000A90970 /* MonthlyBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E14AA72A9D859000A90970 /* MonthlyBrandView.swift */; };
+		58E14AAA2A9DA94300A90970 /* ApplyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E14AA92A9DA94300A90970 /* ApplyCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		581B76292A9C7CD200C78908 /* BenefitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitView.swift; sourceTree = "<group>"; };
 		58E14AA42A9D846500A90970 /* RewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardView.swift; sourceTree = "<group>"; };
 		58E14AA72A9D859000A90970 /* MonthlyBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBrandView.swift; sourceTree = "<group>"; };
+		58E14AA92A9DA94300A90970 /* ApplyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				581B76122A9C32D700C78908 /* AccountView.swift */,
 				581B760E2A9C2D1F00C78908 /* EmptyView.swift */,
 				581B76022A9C28C200C78908 /* PointView.swift */,
+				58E14AA92A9DA94300A90970 /* ApplyCardView.swift */,
 				581B76222A9C656400C78908 /* EventView.swift */,
 				581B76292A9C7CD200C78908 /* BenefitView.swift */,
 				58E14AA42A9D846500A90970 /* RewardView.swift */,
@@ -213,6 +216,7 @@
 				581B76232A9C656400C78908 /* EventView.swift in Sources */,
 				58E14AA52A9D846500A90970 /* RewardView.swift in Sources */,
 				581B76032A9C28C200C78908 /* PointView.swift in Sources */,
+				58E14AAA2A9DA94300A90970 /* ApplyCardView.swift in Sources */,
 				58E14AA82A9D859000A90970 /* MonthlyBrandView.swift in Sources */,
 				581B762A2A9C7CD200C78908 /* BenefitView.swift in Sources */,
 				581B760F2A9C2D1F00C78908 /* EmptyView.swift in Sources */,
