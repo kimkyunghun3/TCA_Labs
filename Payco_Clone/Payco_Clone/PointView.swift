@@ -2,10 +2,11 @@ import SwiftUI
 
 struct PointView: View {
   var body: some View {
-    VStack(spacing: 30) {
+    ScrollView {
       AccountView()
       ItemListsView()
       EventView()
+      BenefitView()
       Spacer()
     }
   }
