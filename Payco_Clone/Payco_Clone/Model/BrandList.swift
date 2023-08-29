@@ -79,7 +79,7 @@ enum BrandList: String, Identifiable {
   
   var image: String {
     switch self {
-    case .gmarket: return "GS_25"
+    case .gmarket: return "G_market"
     case .musinsa: return "Musinsa"
     case .industrialBank: return "IBK"
     case .gs25: return "GS_25"
@@ -87,7 +87,7 @@ enum BrandList: String, Identifiable {
     case .akPlaza: return "AKPlaza"
     case .eduwill: return "Eduwill"
     case .twentyNineCM: return "twentyNineCM"
-    case .gsTheFresh: return "GS_25"
+    case .gsTheFresh: return "GS_THE_FRESH"
     }
   }
   

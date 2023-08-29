@@ -7,7 +7,10 @@ struct PointView: View {
       ItemListsView()
       EventView()
       BenefitView()
+      RewardView()
+      MonthlyBrandView()
       Spacer()
+      
     }
   }
 }
