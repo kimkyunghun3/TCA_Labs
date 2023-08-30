@@ -2,6 +2,8 @@ import SwiftUI
 
 struct MonthlyBrandView: View {
   @State private var items = BrandList.data
+  @State private var offset: CGFloat = 0
+  private let timer = Timer.publish(every: 0.01, on: .main, in: .default).autoconnect()
   
   var body: some View {
     VStack {
@@ -38,6 +40,11 @@ private extension MonthlyBrandView {
         }
       }
       .frame(height: 150)
+      .offset(x: offset)
+      .animation(.easeIn, value: offset)
+    }
+    .onReceive(timer) { _ in
+      offset -= 0.3
     }
   }
   
