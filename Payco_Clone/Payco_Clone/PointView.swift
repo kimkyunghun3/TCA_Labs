@@ -9,8 +9,8 @@ struct PointView: View {
       BenefitView()
       RewardView()
       MonthlyBrandView()
-      Spacer()
-      
+      CardRegisterView()
+      PaycoInfoView()
     }
   }
 }

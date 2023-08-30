@@ -7,7 +7,7 @@ struct ItemListsView: View {
     LazyVGrid(columns: rows, spacing: 30) {
       ForEach(ItemList.itemList) { item in
         VStack(spacing: 15) {
-          Image(systemName: item.imageName)
+          Image(item.imageName)
             .resizable()
             .frame(width: 40, height: 40)
           Text(item.rawValue)
@@ -15,6 +15,7 @@ struct ItemListsView: View {
         }
       }
     }
+    .padding()
   }
 }
 

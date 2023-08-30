@@ -16,6 +16,7 @@ struct BenefitView: View {
     .padding()
     .background(Color.gray.opacity(0.05))
     .cornerRadius(30)
+    .padding()
   }
 }
 
@@ -26,8 +27,8 @@ private extension BenefitView {
       Text(monthlyPointBenefit)
         .font(.title2)
         .bold()
-        .padding()
     }
+    .padding(.vertical)
     .frame(maxWidth: .infinity, alignment: .leading)
   }
   
@@ -35,7 +36,6 @@ private extension BenefitView {
     HStack {
       ForEach(buttonList, id: \.self) { buttonTitle in
         Button {
-          
         } label: {
           Text(buttonTitle)
             .padding()
@@ -87,6 +87,7 @@ private extension BenefitView {
     .foregroundColor(.black)
     .background(Color.white)
     .cornerRadius(30)
+    .padding()
   }
 }
 

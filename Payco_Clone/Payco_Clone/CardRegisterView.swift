@@ -9,14 +9,15 @@ struct PagingControls: View {
     HStack {
       ForEach(0..<totalCount, id: \.self) { pagingIndex in
         RoundedRectangle(cornerRadius: 10)
-          .frame(width: pagecontrolTracker == pagingIndex ? 40 : 10, height: 10)
+          .frame(width: pagecontrolTracker == pagingIndex ? 40 : 6, height: 6)
+          .foregroundColor(pagecontrolTracker == pagingIndex ? .black : .gray.opacity(0.2))
           .animation(.easeInOut, value: pagecontrolTracker)
       }
     }
   }
 }
 
-struct ContentView: View {
+struct CardRegisterView: View {
   private let titles: [String] = [
     "결제할 때 사용 가능한\n5천 포인트 바로 받기",
     "PAYCO 포인트로\n해외결제도 된다는 사실",
@@ -46,13 +47,15 @@ struct ContentView: View {
         }
         
       }
-      .tabViewStyle(.page)
+      .tabViewStyle(.page(indexDisplayMode: .never))
       
       PagingControls(
         pagecontrolTracker: $pagecontrolTracker,
         totalCount: titles.count
       )
+      .offset(y: -20)
     }
+    .frame(height: 400)
   }
 }
 
@@ -80,14 +83,14 @@ struct ApplyCardView: View {
     .frame(height: 300)
     .frame(maxWidth: .infinity)
     .padding()
-    .background(Color.gray.opacity(0.2))
-    .cornerRadius(20)
+    .background(Color.gray.opacity(0.05))
+    .cornerRadius(30)
   }
 }
 
 private extension ApplyCardView {
   var image: some View  {
-    Image(systemName: "globe.asia.australia.fill")
+    Image("Money")
       .resizable()
       .scaledToFit()
       .foregroundColor(.teal)
@@ -123,8 +126,8 @@ private extension ApplyCardView {
   }
 }
 
-struct ApplyCardView_Previews: PreviewProvider {
+struct CardRegisterView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    CardRegisterView()
   }
 }

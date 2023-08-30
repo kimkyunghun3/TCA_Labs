@@ -37,6 +37,7 @@ struct AccountView: View {
       .frame(width: 400, height: 200, alignment: .leading)
       .background(Color.purple)
       .cornerRadius(20)
+      .padding()
   }
 }
 

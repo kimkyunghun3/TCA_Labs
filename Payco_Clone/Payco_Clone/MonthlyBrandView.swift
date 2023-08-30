@@ -13,8 +13,9 @@ struct MonthlyBrandView: View {
       brands
     }
     .padding()
-    .background(Color.gray.opacity(0.2))
-    .cornerRadius(20)
+    .background(Color.gray.opacity(0.05))
+    .cornerRadius(30)
+    .padding()
   }
 }
 
@@ -39,8 +40,8 @@ private extension MonthlyBrandView {
       Text("이달의 브랜드")
       Text("최대 15% 적립")
         .foregroundColor(.red)
-        .bold()
     }
+    .bold()
     .font(.title2)
     .padding()
   }
@@ -54,7 +55,7 @@ private extension MonthlyBrandView {
     .frame(height: 10)
     .padding()
     .foregroundColor(.black)
-    .background(Color.gray.opacity(0.3))
+    .background(Color.gray.opacity(0.1))
     .cornerRadius(10)
     .font(.subheadline)
   }

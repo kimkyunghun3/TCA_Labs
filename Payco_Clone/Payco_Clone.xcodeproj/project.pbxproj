@@ -20,8 +20,9 @@
 		581B762A2A9C7CD200C78908 /* BenefitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581B76292A9C7CD200C78908 /* BenefitView.swift */; };
 		58E14AA52A9D846500A90970 /* RewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E14AA42A9D846500A90970 /* RewardView.swift */; };
 		58E14AA82A9D859000A90970 /* MonthlyBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E14AA72A9D859000A90970 /* MonthlyBrandView.swift */; };
-		58E14AAA2A9DA94300A90970 /* ApplyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E14AA92A9DA94300A90970 /* ApplyCardView.swift */; };
+		58E14AAA2A9DA94300A90970 /* CardRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E14AA92A9DA94300A90970 /* CardRegisterView.swift */; };
 		58E14AAC2A9EB89E00A90970 /* PaycoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E14AAB2A9EB89E00A90970 /* PaycoInfoView.swift */; };
+		58E14AAE2A9EBA7D00A90970 /* InfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E14AAD2A9EBA7D00A90970 /* InfoList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,9 @@
 		581B76292A9C7CD200C78908 /* BenefitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitView.swift; sourceTree = "<group>"; };
 		58E14AA42A9D846500A90970 /* RewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardView.swift; sourceTree = "<group>"; };
 		58E14AA72A9D859000A90970 /* MonthlyBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBrandView.swift; sourceTree = "<group>"; };
-		58E14AA92A9DA94300A90970 /* ApplyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyCardView.swift; sourceTree = "<group>"; };
+		58E14AA92A9DA94300A90970 /* CardRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterView.swift; sourceTree = "<group>"; };
 		58E14AAB2A9EB89E00A90970 /* PaycoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaycoInfoView.swift; sourceTree = "<group>"; };
+		58E14AAD2A9EBA7D00A90970 /* InfoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,7 @@
 				581B76122A9C32D700C78908 /* AccountView.swift */,
 				581B760E2A9C2D1F00C78908 /* EmptyView.swift */,
 				581B76022A9C28C200C78908 /* PointView.swift */,
-				58E14AA92A9DA94300A90970 /* ApplyCardView.swift */,
+				58E14AA92A9DA94300A90970 /* CardRegisterView.swift */,
 				58E14AAB2A9EB89E00A90970 /* PaycoInfoView.swift */,
 				581B76222A9C656400C78908 /* EventView.swift */,
 				581B76292A9C7CD200C78908 /* BenefitView.swift */,
@@ -124,6 +126,7 @@
 			children = (
 				581B761C2A9C5B3000C78908 /* ItemList.swift */,
 				581B76252A9C663B00C78908 /* BrandList.swift */,
+				58E14AAD2A9EBA7D00A90970 /* InfoList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,8 +222,9 @@
 				581B76232A9C656400C78908 /* EventView.swift in Sources */,
 				58E14AA52A9D846500A90970 /* RewardView.swift in Sources */,
 				58E14AAC2A9EB89E00A90970 /* PaycoInfoView.swift in Sources */,
+				58E14AAE2A9EBA7D00A90970 /* InfoList.swift in Sources */,
 				581B76032A9C28C200C78908 /* PointView.swift in Sources */,
-				58E14AAA2A9DA94300A90970 /* ApplyCardView.swift in Sources */,
+				58E14AAA2A9DA94300A90970 /* CardRegisterView.swift in Sources */,
 				58E14AA82A9D859000A90970 /* MonthlyBrandView.swift in Sources */,
 				581B762A2A9C7CD200C78908 /* BenefitView.swift in Sources */,
 				581B760F2A9C2D1F00C78908 /* EmptyView.swift in Sources */,

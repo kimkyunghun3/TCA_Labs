@@ -16,14 +16,14 @@ enum ItemList: String, CaseIterable, Identifiable {
   
   var imageName: String {
     switch self {
-    case .transfer: return "wonsign.circle"
-    case .charge: return  "bolt.circle"
-    case .transform: return "waveform"
-    case .history: return "square.stack.3d.up.fill"
-    case .monthlyBrand: return "square.text.square.fill"
-    case .pointGift: return "gift"
-    case .withdrawATM: return "bolt.batteryblock.fill"
-    case .incomDeduction: return "tablecells.badge.ellipsis"
+    case .transfer: return "Transfer"
+    case .charge: return  "Charging"
+    case .transform: return "Conversion"
+    case .history: return "History"
+    case .monthlyBrand: return "Brand"
+    case .pointGift: return "Gift"
+    case .withdrawATM: return "ATM"
+    case .incomDeduction: return "TaxDeduction"
     }
   }
 }
