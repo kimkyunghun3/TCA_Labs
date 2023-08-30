@@ -2,15 +2,33 @@ import SwiftUI
 
 struct PointView: View {
   var body: some View {
-    ScrollView {
-      AccountView()
-      ItemListsView()
-      EventView()
-      BenefitView()
-      RewardView()
-      MonthlyBrandView()
-      CardRegisterView()
-      PaycoInfoView()
+    NavigationView {
+      ScrollView {
+        AccountView()
+        ItemListsView()
+        EventView()
+        BenefitView()
+        RewardView()
+        MonthlyBrandView()
+        CardRegisterView()
+        PaycoInfoView()
+      }
+      .toolbar {
+        ToolbarItem(placement: .navigationBarLeading) {
+          Text("포인트")
+            .font(.title)
+            .bold()
+        }
+        ToolbarItem(placement: .navigationBarTrailing) {
+          HStack {
+            Image(systemName: "doc.text.magnifyingglass")
+            Image(systemName: "bell")
+              .badge(4)
+            Image(systemName: "person.crop.circle.badge.exclamationmark")
+          }
+          .font(.title3)
+        }
+      }
     }
   }
 }

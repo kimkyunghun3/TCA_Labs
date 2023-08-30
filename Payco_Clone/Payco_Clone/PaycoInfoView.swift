@@ -19,7 +19,7 @@ private extension PaycoInfoView {
   
   var backgroundView: some View {
     RoundedRectangle(cornerRadius: 20)
-      .foregroundColor(.gray.opacity(0.15))
+      .foregroundColor(Color.gray.opacity(0.05))
       .frame(height: 300)
       .padding()
   }
