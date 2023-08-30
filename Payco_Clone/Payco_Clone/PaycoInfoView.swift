@@ -6,29 +6,36 @@ struct PaycoInfoView: View {
   
   var body: some View {
     ZStack(alignment: .top) {
-      HStack {
-        Image("Instagram")
-          .resizable()
-          .scaledToFit()
-          .frame(width: 30, height: 30)
-        Text("지금 페이코는")
-          .font(.title2)
-          .bold()
-      }
-      .offset(x: -90, y: -10)
+      backgroundView
+      title
+      .offset(x: -90, y: 50)
       infos
-        .offset(y: 50)
-//        .padding()
+        .offset(x: 40, y: 100)
     }
-//    .frame(height: 250)
-//    .padding(30)
-//    .background(Color.gray.opacity(0.15))
-//    .cornerRadius(20)
-//    .padding()
   }
 }
 
 private extension PaycoInfoView {
+  
+  var backgroundView: some View {
+    RoundedRectangle(cornerRadius: 20)
+      .foregroundColor(.gray.opacity(0.15))
+      .frame(height: 300)
+      .padding()
+  }
+  
+  var title: some View {
+    HStack {
+      Image("Instagram")
+        .resizable()
+        .scaledToFit()
+        .frame(width: 30, height: 30)
+      Text("지금 페이코는")
+        .font(.title2)
+        .bold()
+    }
+  }
+  
   var infos: some View {
     ScrollView(.horizontal, showsIndicators: false) {
       LazyVGrid(columns: gridItem) {
