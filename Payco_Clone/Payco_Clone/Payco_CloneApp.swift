@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct Payco_CloneApp: App {
-  @State private var selection: Int = 1
+  @State private var selection: Tab = .point
   
   enum Tab {
     case benefit
@@ -14,7 +14,6 @@ struct Payco_CloneApp: App {
   
   var body: some Scene {
     WindowGroup {
-      
       TabView(selection: $selection) {
         EmptyView()
           .tabItem {

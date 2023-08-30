@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MonthlyBrandView: View {
-  let columns: [GridItem] = Array(repeating: .init(.fixed(50)), count: BrandList.data.count)
+  @State private var items = BrandList.data
   
   var body: some View {
     VStack {
@@ -23,15 +23,21 @@ private extension MonthlyBrandView {
   
   var brands: some View {
     ScrollView(.horizontal, showsIndicators: false) {
-      LazyVGrid(columns: columns, spacing: 10) {
-        ForEach(BrandList.data) { brand in
-          Image(brand.image)
+      LazyHStack {
+        ForEach(0..<items.count, id: \.self) { index in
+          Image(items[index].image)
             .resizable()
             .clipShape(Circle())
-            .frame(width: 50, height: 50)
-            .padding()
+            .frame(width: 70, height: 80)
+            .padding(5)
+            .onAppear {
+              if index == items.count - 3 {
+                items.append(contentsOf: BrandList.data)
+              }
+            }
         }
       }
+      .frame(height: 150)
     }
   }
   
