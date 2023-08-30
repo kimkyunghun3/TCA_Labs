@@ -3,7 +3,7 @@ import SwiftUI
 struct BenefitView: View {
   let buttonList = ["전체", "온라인", "오프라인", "NEW"]
   let monthlyPointBenefit = "8월 포인트 결제 혜택"
-  @State private var isSelectied = false
+  @State private var isSelectied = "전체"
   @State var moreCount = 1
   
   var body: some View {
@@ -36,12 +36,13 @@ private extension BenefitView {
     HStack {
       ForEach(buttonList, id: \.self) { buttonTitle in
         Button {
+          isSelectied = buttonTitle
         } label: {
           Text(buttonTitle)
             .padding()
-            .font(.subheadline)
-            .foregroundColor(.black)
-            .background(Color.gray.opacity(0.15))
+            .fontWeight(isSelectied == buttonTitle ? .bold : .light)
+            .foregroundColor(isSelectied == buttonTitle ? .white : .black)
+            .background(isSelectied == buttonTitle ? .black : Color.gray.opacity(0.15))
             .cornerRadius(20)
         }
       }
