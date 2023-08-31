@@ -3,6 +3,70 @@ import SwiftUI
 struct EventView: View {
   var body: some View {
     Carousel()
+      .frame(height: 200)
+      .frame(maxWidth: .infinity)
+  }
+}
+
+struct CarouselView<Content: View>: View {
+  typealias PageIndex = Int
+  
+  let pageCount: Int
+  let visibleEdgeSpace: CGFloat
+  let spacing: CGFloat
+  let content: (PageIndex) -> Content
+  private let timer = Timer.publish(every: 3, on: .main, in: .default).autoconnect()
+  
+  @GestureState var dragOffset: CGFloat = 0
+  @State var currentIndex: Int = 0
+  
+  init(
+    pageCount: Int,
+    visibleEdgeSpace: CGFloat,
+    spacing: CGFloat,
+    @ViewBuilder content: @escaping (PageIndex) -> Content
+  ) {
+    self.pageCount = pageCount
+    self.visibleEdgeSpace = visibleEdgeSpace
+    self.spacing = spacing
+    self.content = content
+  }
+  
+  var body: some View {
+    GeometryReader { proxy in
+      let baseOffset: CGFloat = spacing + visibleEdgeSpace
+      let pageWidth: CGFloat = proxy.size.width - (visibleEdgeSpace + spacing) * 2
+      let offsetX: CGFloat = baseOffset + CGFloat(currentIndex) * -pageWidth + CGFloat(currentIndex) * -spacing + dragOffset
+      
+      HStack(spacing: spacing) {
+        ForEach(0..<pageCount, id: \.self) { pageIndex in
+          self.content(pageIndex)
+            .frame(
+              width: pageWidth,
+              height: proxy.size.height
+            )
+        }
+        .contentShape(Rectangle())
+      }
+      .offset(x: offsetX)
+      .animation(.default, value: offsetX)
+      .gesture(
+        DragGesture()
+          .updating($dragOffset) { value, out, _ in
+            out = value.translation.width
+          }
+          .onEnded { value in
+            let offsetX = value.translation.width
+            let progress = -offsetX / pageWidth
+            let increment = Int(progress.rounded())
+            
+            currentIndex = max(min(currentIndex + increment, pageCount - 1), 0)
+          }
+      )
+      .onReceive(timer) { _ in
+        currentIndex += 1
+      }
+    }
   }
 }
 
@@ -10,45 +74,44 @@ struct Carousel: View {
   @State var currentTabIndex = 0
   @State var eventLists = BrandList.data
   
+  
   var body: some View {
-    TabView(selection: $currentTabIndex) {
+    CarouselView(pageCount: eventLists.count, visibleEdgeSpace: 8, spacing: 5) { index in
       ForEach(eventLists) { data in
-        
         HStack {
           VStack(alignment: .leading) {
-            Spacer()
-            
             Text(data.pointCardInstruction)
               .foregroundColor(.white.opacity(0.5))
-              .font(.title3)
-              .padding(.top, 30)
-  
-            Spacer()
-
+              .font(.body)
+              .padding(.top, 25)
+            
+            
             Text(data.title)
               .foregroundColor(.white)
               .font(.title2)
-              
-            Spacer()
-
+              .padding(.top, 10)
+              .padding(.bottom, 10)
+            
             Text(data.date)
               .foregroundColor(.white.opacity(0.5))
-              .font(.title2)
+              .font(.body)
               .padding(.bottom, 30)
+            
           }
-          .padding(.leading, 30)
+          .frame(alignment: .leading)
+          .frame(maxWidth: .infinity)
           
-          Image(systemName: "swift")
+          Image(data.eventImage)
             .resizable()
-            .frame(width: 150, height: 150)
+            .scaledToFit()
+            .frame(width: 150, height: 200)
         }
-        .frame(width: 400, height: 250)
+        .frame(height: 200)
         .background(data.color)
         .cornerRadius(30)
         .bold()
       }
     }
-    .tabViewStyle(.page(indexDisplayMode: .never))
   }
 }
 

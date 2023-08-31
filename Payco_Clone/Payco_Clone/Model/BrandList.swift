@@ -39,17 +39,17 @@ enum BrandList: String, Identifiable {
     case .industrialBank:
       return self.rawValue + "계좌 연동하면\n 최대 15,000P 혜택"
     case .gs25:
-      return self.rawValue
+      return self.rawValue + "결제시\n건당 15% 적립"
     case .megaCoffe:
-      return self.rawValue
+      return self.rawValue + "에서\n15% 할인"
     case .akPlaza:
-      return self.rawValue
+      return self.rawValue + "에서\n최대 16% 혜택"
     case .eduwill:
-      return self.rawValue
+      return self.rawValue + "에서\n 5,000원 할인"
     case .twentyNineCM:
-      return self.rawValue
+      return self.rawValue + "에서\n최대 5% 할인"
     case .gsTheFresh:
-      return self.rawValue
+      return self.rawValue + "에서\n최대 5% 할인"
     }
   }
   
@@ -66,13 +66,13 @@ enum BrandList: String, Identifiable {
   var color: Color {
     switch self {
     case .gmarket: return .green
-    case .musinsa: return .black
+    case .musinsa: return .brown
     case .industrialBank: return .indigo
     case .gs25: return .blue
     case .megaCoffe: return .yellow
     case .akPlaza: return .mint
     case .eduwill:  return .orange
-    case .twentyNineCM: return .black
+    case .twentyNineCM: return .pink
     case .gsTheFresh: return .teal
     }
   }
@@ -88,6 +88,20 @@ enum BrandList: String, Identifiable {
     case .eduwill: return "Eduwill"
     case .twentyNineCM: return "twentyNineCM"
     case .gsTheFresh: return "GS_THE_FRESH"
+    }
+  }
+  
+  var eventImage: String {
+    switch self {
+    case .gmarket: return "cafe"
+    case .musinsa: return "cafe"
+    case .industrialBank: return "cafe"
+    case .gs25: return "cafe"
+    case .megaCoffe: return "cafe"
+    case .akPlaza: return "cafe"
+    case .eduwill: return "cafe"
+    case .twentyNineCM: return "cafe"
+    case .gsTheFresh: return "cafe"
     }
   }
   

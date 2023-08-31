@@ -23,7 +23,6 @@ struct PointView: View {
           HStack {
             Image(systemName: "doc.text.magnifyingglass")
             Image(systemName: "bell")
-              .badge(4)
             Image(systemName: "person.crop.circle.badge.exclamationmark")
           }
           .font(.title3)
