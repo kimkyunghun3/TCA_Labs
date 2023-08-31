@@ -3,15 +3,18 @@ import SwiftUI
 struct PointView: View {
   var body: some View {
     NavigationView {
-      ScrollView {
-        AccountView()
-        ItemListsView()
-        EventView()
-        BenefitView()
-        RewardView()
-        MonthlyBrandView()
-        CardRegisterView()
-        PaycoInfoView()
+      ZStack(alignment: .bottom) {
+        ScrollView {
+          AccountView()
+          ItemListsView()
+          EventView()
+          BenefitView()
+          RewardView()
+          MonthlyBrandView()
+          CardRegisterView()
+          PaycoInfoView()
+        }
+        SearchFeatureView()
       }
       .toolbar {
         ToolbarItem(placement: .navigationBarLeading) {
