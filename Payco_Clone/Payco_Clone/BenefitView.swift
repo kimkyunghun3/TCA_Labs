@@ -33,21 +33,22 @@ private extension BenefitView {
   }
   
   var buttons: some View {
-    HStack {
-      ForEach(buttonList, id: \.self) { buttonTitle in
-        Button {
-          isSelectied = buttonTitle
-        } label: {
-          Text(buttonTitle)
-            .padding()
-            .fontWeight(isSelectied == buttonTitle ? .bold : .light)
-            .foregroundColor(isSelectied == buttonTitle ? .white : .black)
-            .background(isSelectied == buttonTitle ? .black : Color.gray.opacity(0.15))
-            .cornerRadius(20)
+    ScrollView(.horizontal) {
+      HStack(spacing: 10) {
+        ForEach(buttonList, id: \.self) { buttonTitle in
+          Button {
+            isSelectied = buttonTitle
+          } label: {
+            Text(buttonTitle)
+              .padding()
+              .fontWeight(isSelectied == buttonTitle ? .bold : .light)
+              .foregroundColor(isSelectied == buttonTitle ? .white : .black)
+              .background(isSelectied == buttonTitle ? .black : Color.gray.opacity(0.15))
+              .cornerRadius(25)
+          }
         }
       }
     }
-    .frame(maxWidth: .infinity, alignment: .leading)
   }
   
   var rows: some View {
