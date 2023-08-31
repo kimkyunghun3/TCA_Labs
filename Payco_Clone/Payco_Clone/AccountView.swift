@@ -1,6 +1,14 @@
 import SwiftUI
 
 struct AccountView: View {
+  @State private var rotationDegrees: Double = 5
+  private let timer = Timer.publish(every: 3, on: .current, in: .default).autoconnect()
+  
+  private var animation: Animation {
+    .default
+    .speed(0.2)
+    .repeatForever(autoreverses: true)
+  }
   var body: some View {
     ZStack {
       RoundedRectangle(cornerRadius: 30)
@@ -38,12 +46,13 @@ struct AccountView: View {
       .padding(.trailing, 250)
       
       VStack {
-        Image("Payco_Card")
+        Image("card")
           .resizable()
           .scaledToFit()
           .frame(width: 150, height: 150)
           .shadow(radius: 20, x: 15, y: 15)
-
+          .rotation3DEffect(.degrees(rotationDegrees), axis: (x: 0.1, y: -0.5, z: 0.0))
+          .animation(.spring(response: 2, dampingFraction: 0.1), value: rotationDegrees)
         
         Button {
           
@@ -60,7 +69,9 @@ struct AccountView: View {
       }
       .padding(.leading, 200)
       .padding(.bottom, 50)
- 
+      .onReceive(timer) { _ in
+        rotationDegrees = rotationDegrees == 5 ? -5 : 5
+      }
     }
   }
 }
