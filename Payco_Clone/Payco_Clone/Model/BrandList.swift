@@ -12,8 +12,8 @@ enum BrandList: String, Identifiable {
   case twentyNineCM = "29CM"
   case gsTheFresh = "GS 더프레시"
   
-  var id: String {
-    return self.rawValue
+  var id: UUID {
+    return UUID()
   }
   
   var pointCardInstruction: String {
@@ -146,8 +146,8 @@ enum BrandList: String, Identifiable {
 
 extension BrandList {
   static let data: [BrandList] = [
-    .gmarket, .musinsa, .industrialBank,
+    .gsTheFresh, .gmarket, .musinsa, .industrialBank,
     .gs25, .megaCoffe, .akPlaza,
-    .eduwill, .twentyNineCM, .gsTheFresh
+    .eduwill, .twentyNineCM, .gsTheFresh, .gmarket,
   ]
 }

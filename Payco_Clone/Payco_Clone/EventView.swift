@@ -39,7 +39,7 @@ struct CarouselView<Content: View>: View {
       let offsetX: CGFloat = baseOffset + CGFloat(currentIndex) * -pageWidth + CGFloat(currentIndex) * -spacing + dragOffset
       
       HStack(spacing: spacing) {
-        ForEach(0..<pageCount, id: \.self) { pageIndex in
+        ForEach(1..<pageCount + 1, id: \.self) { pageIndex in
           self.content(pageIndex)
             .frame(
               width: pageWidth,
@@ -61,8 +61,17 @@ struct CarouselView<Content: View>: View {
             let increment = Int(progress.rounded())
             
             currentIndex = max(min(currentIndex + increment, pageCount - 1), 0)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+              if currentIndex == 8 { currentIndex = 0 }
+            }
           }
       )
+      .onChange(of: currentIndex) { _ in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+          if currentIndex == 8 { currentIndex = 0 }
+          if currentIndex == 0 { currentIndex = 8 }
+        }
+      }
       .onReceive(timer) { _ in
         currentIndex += 1
       }
@@ -74,25 +83,23 @@ struct Carousel: View {
   @State var currentTabIndex = 0
   @State var eventLists = BrandList.data
   
-  
   var body: some View {
     CarouselView(pageCount: eventLists.count, visibleEdgeSpace: 8, spacing: 5) { index in
-      ForEach(eventLists) { data in
+      ForEach(1..<eventLists.count - 1, id: \.self) { data in
         HStack {
           VStack(alignment: .leading) {
-            Text(data.pointCardInstruction)
+            Text(eventLists[data].pointCardInstruction)
               .foregroundColor(.white.opacity(0.5))
               .font(.body)
               .padding(.top, 25)
             
-            
-            Text(data.title)
+            Text(eventLists[data].title)
               .foregroundColor(.white)
               .font(.title2)
               .padding(.top, 10)
               .padding(.bottom, 10)
             
-            Text(data.date)
+            Text(eventLists[data].date)
               .foregroundColor(.white.opacity(0.5))
               .font(.body)
               .padding(.bottom, 30)
@@ -100,14 +107,14 @@ struct Carousel: View {
           }
           .frame(alignment: .leading)
           .frame(maxWidth: .infinity)
-          
-          Image(data.eventImage)
+
+          Image(eventLists[data].eventImage)
             .resizable()
             .scaledToFit()
             .frame(width: 150, height: 200)
         }
         .frame(height: 200)
-        .background(data.color)
+        .background(eventLists[data].color)
         .cornerRadius(30)
         .bold()
       }
