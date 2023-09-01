@@ -27,6 +27,7 @@ struct Payco_CloneApp: App {
             Image(systemName: "p.circle")
             Text("포인트")
           }
+          .toolbarBackground(.visible, for: .tabBar)
           .tag(Tab.point)
 
         EmptyView()
