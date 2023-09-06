@@ -2,7 +2,6 @@ import SwiftUI
 
 struct AccountView: View {
   @State private var rotationDegrees: Double = 5
-  private let timer = Timer.publish(every: 3, on: .current, in: .default).autoconnect()
   
   private var animation: Animation {
     .default
@@ -11,67 +10,72 @@ struct AccountView: View {
   }
   var body: some View {
     ZStack {
-      RoundedRectangle(cornerRadius: 30)
+      LinearGradient(colors: [.orange.opacity(0.9), .red], startPoint: .leading, endPoint: .trailing)
+        .overlay {
+          VStack(alignment: .leading) {
+            Text("PAYCO Point")
+              .foregroundColor(.white)
+              .font(.body)
+              .bold()
+              .padding(.vertical, 5)
+            
+            Button {
+              // Button Detail View 이동
+            } label: {
+              Text("309 P >")
+                .font(.title)
+                .foregroundColor(.white)
+                .bold()
+            }
+            .padding(.bottom, 30)
+            
+            Button {
+              // 계좌 등록 View 이동
+            } label: {
+              Text("토스뱅크 (9920)")
+                .font(.caption)
+                .foregroundColor(.yellow)
+              // markdown
+                .underline()
+            }
+            .padding(.bottom, 20)
+          }
+          .padding(.trailing, 250)
+          
+          
+          Button {
+            
+          } label: {
+            Text("카드관리")
+              .font(.caption)
+              .frame(width: 70, height: 30)
+              .foregroundColor(.white.opacity(0.7))
+              .background(Color.white.opacity(0.2))
+              .cornerRadius(10)
+          }
+          .frame(height: 100)
+          .padding(.leading, 270)
+          .padding(.bottom, -200)
+          .onAppear {
+            withAnimation(animation) {
+              rotationDegrees = rotationDegrees == 5 ? -5 : 5
+            }
+          }
+        }
         .frame(height: 200)
-        .foregroundColor(Color.red)
+        .cornerRadius(20)
         .padding()
       
-      VStack(alignment: .leading) {
-        Text("PAYCO Point")
-          .foregroundColor(.white)
-          .font(.body)
-          .bold()
-          .padding(.vertical, 5)
-        
-        Button {
-          // Button Detail View 이동
-        } label: {
-          Text("309 P >")
-            .font(.title)
-            .foregroundColor(.white)
-            .bold()
-        }
-        .padding(.bottom, 30)
-        
-        Button {
-          // 계좌 등록 View 이동
-        } label: {
-          Text("토스뱅크 (9920)")
-            .font(.caption)
-            .foregroundColor(.yellow)
-            .underline()
-        }
-        .padding(.bottom, 20)
-      }
-      .padding(.trailing, 250)
-      
-      VStack {
-        Image("card")
-          .resizable()
-          .scaledToFit()
-          .frame(width: 150, height: 150)
-          .shadow(radius: 20, x: 15, y: 15)
-          .rotation3DEffect(.degrees(rotationDegrees), axis: (x: 0.1, y: -0.5, z: 0.0))
-          .animation(.spring(response: 2, dampingFraction: 0.1), value: rotationDegrees)
-        
-        Button {
-          
-        } label: {
-          Text("카드관리")
-            .font(.subheadline)
-        }
-        
-        .frame(width: 80, height: 40)
-        .foregroundColor(.white.opacity(0.8))
-        .background(Color.white.opacity(0.3))
-        .cornerRadius(15)
-        .padding(.leading, 50)
-      }
-      .padding(.leading, 200)
-      .padding(.bottom, 50)
-      .onReceive(timer) { _ in
-        rotationDegrees = rotationDegrees == 5 ? -5 : 5
-      }
+      Image("card")
+        .resizable()
+        .aspectRatio(1.0, contentMode: .fit)
+        .frame(width: 150)
+        .shadow(radius: 20, x: 15, y: 15)
+        .rotation3DEffect(.degrees(rotationDegrees), axis: (x: 0.1, y: -0.5, z: 0.0))
+        .animation(.linear(duration: 1).repeatForever(autoreverses: true), value: rotationDegrees)
+        .padding(.leading, 190)
+        .padding(.bottom, 100)
+        .frame(alignment: .trailing)
     }
   }
 }
