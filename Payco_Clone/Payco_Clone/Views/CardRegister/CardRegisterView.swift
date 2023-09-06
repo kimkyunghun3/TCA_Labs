@@ -4,7 +4,7 @@ struct PagingControls: View {
   
   @Binding var pagecontrolTracker: Int
   let totalCount: Int
-
+  
   var body: some View {
     HStack {
       ForEach(1..<totalCount + 1, id: \.self) { pagingIndex in
@@ -47,7 +47,7 @@ struct CardRegisterView: View {
             descriptionVlaue: descriptions[index]
           )
           .padding(.horizontal)
-            .tag(index)
+          .tag(index)
         }
       }
       .onChange(of: pagecontrolTracker) { _ in
@@ -105,18 +105,13 @@ private extension ApplyCardView {
       .foregroundColor(.teal)
   }
   var title: some View {
-    VStack(alignment: .leading, spacing: 10) {
-      Text(titleValue)
-      
-    }
-    .font(.title2)
+    Text(titleValue)
+      .font(.title2)
   }
   
   var description: some View {
-    VStack(alignment: .leading, spacing: 5) {
-      Text(descriptionVlaue)
-    }
-    .foregroundColor(.gray)
+    Text(descriptionVlaue)
+      .foregroundColor(.gray)
   }
   
   var applyButton: some View  {
