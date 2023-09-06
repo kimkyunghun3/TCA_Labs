@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Clock_Clone/Clock_Clone.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Payco_Clone/Payco_Clone.xcodeproj">
    </FileRef>
    <FileRef
