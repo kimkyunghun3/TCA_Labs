@@ -40,11 +40,12 @@ private extension BenefitView {
             isSelectied = buttonTitle
           } label: {
             Text(buttonTitle)
-              .padding()
+              .padding(.horizontal, 20)
+              .padding(.vertical)
               .fontWeight(isSelectied == buttonTitle ? .bold : .light)
               .foregroundColor(isSelectied == buttonTitle ? .white : .black)
               .background(isSelectied == buttonTitle ? .black : Color.gray.opacity(0.15))
-              .cornerRadius(25)
+              .clipShape(Capsule())
           }
         }
       }
@@ -75,17 +76,19 @@ private extension BenefitView {
   }
   
   var moreButton: some View {
-    Button {
+    HStack {
+      HStack {
+        Text("더보기 **\(moreCount)** /")
+        Text("8").foregroundColor(.secondary)
+      }
+      .frame(width: 150, height: 50)
+    }
+    .onTapGesture {
       moreCount += 1
       if moreCount == 9 {
         moreCount = 1
       }
-    } label: {
-      Text("더보기 \(moreCount) / 8")
     }
-    .buttonStyle(.plain)
-    .frame(width: 100, height: 10)
-    .padding()
     .foregroundColor(.black)
     .background(Color.white)
     .cornerRadius(30)
