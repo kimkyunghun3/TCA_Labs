@@ -11,6 +11,8 @@
 		58861B002AA85616005BBA0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861AFF2AA85616005BBA0A /* ContentView.swift */; };
 		58861B022AA85619005BBA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58861B012AA85619005BBA0A /* Assets.xcassets */; };
 		58861B052AA85619005BBA0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58861B042AA85619005BBA0A /* Preview Assets.xcassets */; };
+		58861B0C2AA85806005BBA0A /* WorldClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861B0B2AA85806005BBA0A /* WorldClockView.swift */; };
+		58861B0E2AA85E81005BBA0A /* WorldClockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861B0D2AA85E81005BBA0A /* WorldClockRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		58861AFF2AA85616005BBA0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58861B012AA85619005BBA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58861B042AA85619005BBA0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58861B0B2AA85806005BBA0A /* WorldClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockView.swift; sourceTree = "<group>"; };
+		58861B0D2AA85E81005BBA0A /* WorldClockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				58861AFD2AA85616005BBA0A /* Clock_CloneApp.swift */,
 				58861AFF2AA85616005BBA0A /* ContentView.swift */,
+				58861B0B2AA85806005BBA0A /* WorldClockView.swift */,
+				58861B0D2AA85E81005BBA0A /* WorldClockRow.swift */,
 				58861B012AA85619005BBA0A /* Assets.xcassets */,
 				58861B032AA85619005BBA0A /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				58861B002AA85616005BBA0A /* ContentView.swift in Sources */,
+				58861B0C2AA85806005BBA0A /* WorldClockView.swift in Sources */,
+				58861B0E2AA85E81005BBA0A /* WorldClockRow.swift in Sources */,
 				58861AFE2AA85616005BBA0A /* Clock_CloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
