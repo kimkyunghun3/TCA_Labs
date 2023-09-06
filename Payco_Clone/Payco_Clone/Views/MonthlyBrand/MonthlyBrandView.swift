@@ -4,7 +4,7 @@ struct MonthlyBrandView: View {
   @State private var items = BrandList.data
   @State private var offset: CGFloat = 0
   private let timer = Timer.publish(every: 0.01, on: .main, in: .default).autoconnect()
-
+  
   var body: some View {
     VStack {
       HStack {
@@ -25,28 +25,28 @@ private extension MonthlyBrandView {
   
   var brands: some View {
     ScrollView(.horizontal, showsIndicators: false) {
-      LazyHStack {
+      LazyHStack(alignment: .firstTextBaseline) {
         ForEach(0..<items.count, id: \.self) { index in
           VStack(spacing: 0) {
             if index == 3 || index == 6 {
               NewView()
-                .frame(height: -10)
             }
+            
             Image(items[index].image)
               .resizable()
               .clipShape(Circle())
-              .frame(width: 70, height: 100)
+              .frame(width: 70, height: 70)
               .padding(5)
           }
-
-            .onAppear {
-              if index == items.count - 3 {
-                items.append(contentsOf: BrandList.data)
-              }
+          
+          .onAppear {
+            if index == items.count - 3 {
+              items.append(contentsOf: BrandList.data)
             }
+          }
         }
       }
-      .frame(height: 150)
+      .frame(height: 110)
       .offset(x: offset)
       .animation(.easeIn, value: offset)
     }
