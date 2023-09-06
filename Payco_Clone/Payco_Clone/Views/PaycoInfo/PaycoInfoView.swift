@@ -2,16 +2,16 @@ import SwiftUI
 
 struct PaycoInfoView: View {
   
-  let gridItem: [GridItem] = Array(repeating: .init(.fixed(150)), count: InfoList.images.count)
-  
   var body: some View {
-    ZStack(alignment: .top) {
-      backgroundView
-      title
-      .offset(x: -90, y: 50)
-      infos
-        .offset(x: 40, y: 100)
+    ZStack {
+      VStack {
+        title
+          .frame(height: 50)
+        infos
+      }
+      .background(backgroundView)
     }
+    .frame(height: 250)
   }
 }
 
@@ -20,7 +20,7 @@ private extension PaycoInfoView {
   var backgroundView: some View {
     RoundedRectangle(cornerRadius: 20)
       .foregroundColor(Color.gray.opacity(0.05))
-      .frame(height: 300)
+      .frame(height: 200)
       .padding()
   }
   
@@ -29,24 +29,32 @@ private extension PaycoInfoView {
       Image("Instagram")
         .resizable()
         .scaledToFit()
-        .frame(width: 30, height: 30)
+        .frame(width: 20, height: 20)
       Text("지금 페이코는")
-        .font(.title2)
+        .font(.body)
         .bold()
     }
+    .offset(x: 30)
+    .frame(maxWidth: .infinity, alignment: .leading)
   }
   
   var infos: some View {
     ScrollView(.horizontal, showsIndicators: false) {
-      LazyVGrid(columns: gridItem) {
+      LazyHStack {
+        Rectangle()
+          .fill(.clear)
+          .frame(width: 30)
+        
         ForEach(InfoList.images, id: \.self) { info in
           Image(info)
             .resizable()
-            .frame(width: 150, height: 150)
+            .scaledToFill()
+            .frame(width: 100, height: 100)
             .cornerRadius(15)
-            .padding()
         }
       }
+      .frame(height: 100)
+      .padding(.horizontal, -5)
     }
   }
 }
