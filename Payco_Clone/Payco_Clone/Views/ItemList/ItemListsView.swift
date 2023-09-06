@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct ItemListsView: View {
-  let rows: [GridItem] = Array(repeating: .init(.flexible()), count: 4)
+  let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 4)
   
   var body: some View {
-    LazyVGrid(columns: rows, spacing: 30) {
+    LazyVGrid(columns: columns, spacing: 30) {
       ForEach(ItemList.itemList) { item in
         VStack(spacing: 15) {
           Image(item.imageName)
