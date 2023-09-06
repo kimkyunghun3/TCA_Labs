@@ -4,21 +4,22 @@ struct SearchFeatureView: View {
   @State private var isHidden = false
   
   var body: some View {
-    HStack() {
-      Spacer()
+    ZStack(alignment: .trailing) {
       Text(attributedString)
         .foregroundColor(.white)
-      Spacer()
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(Color.black.opacity(0.9))
+      
       Button {
        isHidden = true
       } label: {
         Image(systemName: "xmark")
-          .foregroundColor(.gray.opacity(0.5))
+          .foregroundColor(.gray.opacity(0.6))
       }
+      .padding(.trailing, 25)
     }
-    .frame(maxWidth: .infinity)
-    .padding()
-    .background(Color.black.opacity(0.7))
+    
     .opacity(isHidden ? 0 : 1)
     .frame(height: 50)
   }
