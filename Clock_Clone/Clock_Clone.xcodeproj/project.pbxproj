@@ -13,6 +13,11 @@
 		58861B052AA85619005BBA0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58861B042AA85619005BBA0A /* Preview Assets.xcassets */; };
 		58861B0C2AA85806005BBA0A /* WorldClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861B0B2AA85806005BBA0A /* WorldClockView.swift */; };
 		58861B0E2AA85E81005BBA0A /* WorldClockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861B0D2AA85E81005BBA0A /* WorldClockRow.swift */; };
+		58861B102AA93D61005BBA0A /* WorldClockFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861B0F2AA93D61005BBA0A /* WorldClockFeature.swift */; };
+		58861B122AA93E93005BBA0A /* WorldClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861B112AA93E93005BBA0A /* WorldClock.swift */; };
+		58861B152AA962FF005BBA0A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 58861B142AA962FF005BBA0A /* ComposableArchitecture */; };
+		58861B172AA9652D005BBA0A /* WorldClockDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861B162AA9652D005BBA0A /* WorldClockDetailFeature.swift */; };
+		58861B192AA96564005BBA0A /* WorldClockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861B182AA96564005BBA0A /* WorldClockDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,10 @@
 		58861B042AA85619005BBA0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58861B0B2AA85806005BBA0A /* WorldClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockView.swift; sourceTree = "<group>"; };
 		58861B0D2AA85E81005BBA0A /* WorldClockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockRow.swift; sourceTree = "<group>"; };
+		58861B0F2AA93D61005BBA0A /* WorldClockFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockFeature.swift; sourceTree = "<group>"; };
+		58861B112AA93E93005BBA0A /* WorldClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClock.swift; sourceTree = "<group>"; };
+		58861B162AA9652D005BBA0A /* WorldClockDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockDetailFeature.swift; sourceTree = "<group>"; };
+		58861B182AA96564005BBA0A /* WorldClockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58861B152AA962FF005BBA0A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +67,7 @@
 			children = (
 				58861AFD2AA85616005BBA0A /* Clock_CloneApp.swift */,
 				58861AFF2AA85616005BBA0A /* ContentView.swift */,
-				58861B0B2AA85806005BBA0A /* WorldClockView.swift */,
-				58861B0D2AA85E81005BBA0A /* WorldClockRow.swift */,
+				58861B1B2AA98D85005BBA0A /* WorldClock */,
 				58861B012AA85619005BBA0A /* Assets.xcassets */,
 				58861B032AA85619005BBA0A /* Preview Content */,
 			);
@@ -71,6 +80,19 @@
 				58861B042AA85619005BBA0A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		58861B1B2AA98D85005BBA0A /* WorldClock */ = {
+			isa = PBXGroup;
+			children = (
+				58861B0B2AA85806005BBA0A /* WorldClockView.swift */,
+				58861B0F2AA93D61005BBA0A /* WorldClockFeature.swift */,
+				58861B162AA9652D005BBA0A /* WorldClockDetailFeature.swift */,
+				58861B182AA96564005BBA0A /* WorldClockDetailView.swift */,
+				58861B112AA93E93005BBA0A /* WorldClock.swift */,
+				58861B0D2AA85E81005BBA0A /* WorldClockRow.swift */,
+			);
+			path = WorldClock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +111,9 @@
 			dependencies = (
 			);
 			name = Clock_Clone;
+			packageProductDependencies = (
+				58861B142AA962FF005BBA0A /* ComposableArchitecture */,
+			);
 			productName = Clock_Clone;
 			productReference = 58861AFA2AA85616005BBA0A /* Clock_Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +142,9 @@
 				Base,
 			);
 			mainGroup = 58861AF12AA85616005BBA0A;
+			packageReferences = (
+				58861B132AA962FF005BBA0A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 58861AFB2AA85616005BBA0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,9 +172,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				58861B002AA85616005BBA0A /* ContentView.swift in Sources */,
+				58861B102AA93D61005BBA0A /* WorldClockFeature.swift in Sources */,
 				58861B0C2AA85806005BBA0A /* WorldClockView.swift in Sources */,
 				58861B0E2AA85E81005BBA0A /* WorldClockRow.swift in Sources */,
 				58861AFE2AA85616005BBA0A /* Clock_CloneApp.swift in Sources */,
+				58861B172AA9652D005BBA0A /* WorldClockDetailFeature.swift in Sources */,
+				58861B122AA93E93005BBA0A /* WorldClock.swift in Sources */,
+				58861B192AA96564005BBA0A /* WorldClockDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58861B132AA962FF005BBA0A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58861B142AA962FF005BBA0A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58861B132AA962FF005BBA0A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58861AF22AA85616005BBA0A /* Project object */;
 }

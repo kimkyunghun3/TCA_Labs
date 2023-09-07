@@ -1,4 +1,5 @@
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct Clock_CloneApp: App {
@@ -13,7 +14,9 @@ struct Clock_CloneApp: App {
     var body: some Scene {
         WindowGroup {
           TabView(selection: $selection) {
-            ContentView()
+            WorldClockView(store: Store(initialState: WorldClockFeature.State(clocks: IdentifiedArray(uniqueElements: WorldClock.dummy)), reducer: {
+              WorldClockFeature()
+            }))
               .tabItem {
                 Image(systemName: "globe")
                 Text("세계 시계")
