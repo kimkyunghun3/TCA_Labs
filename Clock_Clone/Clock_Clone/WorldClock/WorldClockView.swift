@@ -5,12 +5,17 @@ struct WorldClockView: View {
   let store: StoreOf<WorldClockFeature>
   
   var body: some View {
-    WithViewStore(self.store, observe: { $0.clocks }) { viewStore in
+    WithViewStore(self.store, observe: { $0 }) { viewStore in
       NavigationStack {
         List {
-          
-          ForEach(WorldClock.dummy) {
-            WorldClockRow(item: .init(location: $0.location, date: $0.date, standardDate: $0.standardDate))
+          ForEach(viewStore.contents) {
+            WorldClockRow(
+              item: .init(
+                location: $0.location,
+                date: $0.date,
+                standardDate: $0.standardDate
+              )
+            )
           }
         }
         .navigationTitle("세계 시계")
@@ -22,27 +27,23 @@ struct WorldClockView: View {
           }
           ToolbarItem(placement: .navigationBarTrailing) {
             Button {
-              // 추가버튼
+              viewStore.send(.addButtonTapped)
             } label: {
               Image(systemName: "plus")
             }
           }
         }
-        .tint(.orange)
       }
+      .tint(.orange)
     }
-    //    } destination: { subStore in
-    //      WorldClockDetailView(store: subStore)
-    //    }
-    //      .sheet(
-    //          store: self.store.scope(state: \.$destination, action: { .destination($0) }),
-    //          state: /ContactsFeature.Destination.State.addContact,
-    //          action: ContactsFeature.Destination.Action.addContact
-    //      ) { addContactStore in
-    //          NavigationStack {
-    //              AddContactView(store: addContactStore)
-    //          }
-    //      }
+    .sheet(
+      store: self.store.scope(state: \.$destination, action: { .destination($0)}),
+      state: /WorldClockFeature.Destination.State.addClock,
+      action: WorldClockFeature.Destination.Action.addClock,
+      content: { store in
+        WorldClockDetailView(store: store)
+      }
+    )
   }
 }
 
