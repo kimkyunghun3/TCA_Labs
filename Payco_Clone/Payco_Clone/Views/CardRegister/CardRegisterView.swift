@@ -46,7 +46,6 @@ struct CardRegisterView: View {
             titleValue: titles[index],
             descriptionVlaue: descriptions[index]
           )
-          .padding(.horizontal)
           .tag(index)
         }
       }

@@ -5,15 +5,20 @@ struct PointView: View {
     NavigationStack {
       ZStack(alignment: .bottom) {
         ScrollView {
-          NavigationPointView()
-          AccountView()
-          ItemListsView()
-          EventView()
-          BenefitView()
-          RewardView()
-          MonthlyBrandView()
-          CardRegisterView()
-          PaycoInfoView()
+          VStack {
+            NavigationPointView()
+            AccountView()
+            ItemListsView()
+            EventView()
+              .padding(.horizontal, -20)
+            BenefitView()
+            RewardView()
+            MonthlyBrandView()
+            CardRegisterView()
+            PaycoInfoView()
+              .padding(.horizontal, -20)
+          }
+          .padding(.horizontal, 20)
         }
         SearchFeatureView()
       }
@@ -30,16 +35,23 @@ struct NavigationPointView: View {
       Spacer()
       ZStack {
         Image(systemName: "doc.text.magnifyingglass")
+          .resizable()
+          .frame(width: 30, height: 30)
           .font(.title2)
           .overlay(NotificationCountView(value: .constant(5)))
+        
       }
       ZStack {
         Image(systemName: "bell")
+          .resizable()
+          .frame(width: 30, height: 30)
           .font(.title2)
           .overlay(NotificationCountView(value: .constant(24)))
       }
       ZStack {
         Image(systemName: "person.crop.circle.badge.exclamationmark")
+          .resizable()
+          .frame(width: 30, height: 30)
           .font(.title2)
           .overlay(NotificationCountView(value: .constant(999)))
       }

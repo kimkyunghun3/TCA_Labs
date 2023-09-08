@@ -15,7 +15,6 @@ struct ItemListsView: View {
         }
       }
     }
-    .padding()
   }
 }
 

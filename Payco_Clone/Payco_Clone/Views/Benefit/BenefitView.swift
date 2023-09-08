@@ -16,7 +16,6 @@ struct BenefitView: View {
     .padding()
     .background(Color.gray.opacity(0.05))
     .cornerRadius(30)
-    .padding()
   }
 }
 
@@ -99,5 +98,7 @@ private extension BenefitView {
 struct BenefitView_Previews: PreviewProvider {
   static var previews: some View {
     BenefitView()
+      .padding()
+      .previewLayout(.sizeThatFits)
   }
 }

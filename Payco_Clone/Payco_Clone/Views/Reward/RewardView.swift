@@ -16,7 +16,6 @@ struct RewardView: View {
       .background(Color.gray.opacity(0.05))
       .cornerRadius(30)
       .bold()
-      .padding()
     }
 }
 

@@ -17,7 +17,6 @@ struct MonthlyBrandView: View {
     .padding()
     .background(Color.gray.opacity(0.05))
     .cornerRadius(30)
-    .padding()
   }
 }
 

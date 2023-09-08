@@ -64,7 +64,6 @@ struct AccountView: View {
         }
         .frame(height: 200)
         .cornerRadius(20)
-        .padding()
       
       Image("card")
         .resizable()
