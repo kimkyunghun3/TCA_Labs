@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		583384DA2AAAF9BF00CFA947 /* Debug+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583384D92AAAF9BF00CFA947 /* Debug+.swift */; };
 		58861AFE2AA85616005BBA0A /* Clock_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861AFD2AA85616005BBA0A /* Clock_CloneApp.swift */; };
 		58861B002AA85616005BBA0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58861AFF2AA85616005BBA0A /* ContentView.swift */; };
 		58861B022AA85619005BBA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58861B012AA85619005BBA0A /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		583384D92AAAF9BF00CFA947 /* Debug+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Debug+.swift"; sourceTree = "<group>"; };
 		58861AFA2AA85616005BBA0A /* Clock_Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock_Clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58861AFD2AA85616005BBA0A /* Clock_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock_CloneApp.swift; sourceTree = "<group>"; };
 		58861AFF2AA85616005BBA0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				58861AFD2AA85616005BBA0A /* Clock_CloneApp.swift */,
+				583384D92AAAF9BF00CFA947 /* Debug+.swift */,
 				58861AFF2AA85616005BBA0A /* ContentView.swift */,
 				58861B1B2AA98D85005BBA0A /* WorldClock */,
 				58861B012AA85619005BBA0A /* Assets.xcassets */,
@@ -173,6 +176,7 @@
 			files = (
 				58861B002AA85616005BBA0A /* ContentView.swift in Sources */,
 				58861B102AA93D61005BBA0A /* WorldClockFeature.swift in Sources */,
+				583384DA2AAAF9BF00CFA947 /* Debug+.swift in Sources */,
 				58861B0C2AA85806005BBA0A /* WorldClockView.swift in Sources */,
 				58861B0E2AA85E81005BBA0A /* WorldClockRow.swift in Sources */,
 				58861AFE2AA85616005BBA0A /* Clock_CloneApp.swift in Sources */,
