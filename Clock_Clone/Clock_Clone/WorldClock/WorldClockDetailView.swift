@@ -16,6 +16,9 @@ struct WorldClockDetailView: View {
                 Text(content.country ?? "")
                 Spacer()
               }
+              .onTapGesture {
+                store.send(.rowTapped(title: content.name))
+              }
               
               .frame(maxWidth: .infinity)
               .padding(.leading, 15)

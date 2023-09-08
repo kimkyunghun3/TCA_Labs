@@ -16,6 +16,7 @@ struct Clock_CloneApp: App {
           TabView(selection: $selection) {
             WorldClockView(store: Store(initialState: WorldClockFeature.State(clocks: IdentifiedArray(uniqueElements: WorldClock.dummy)), reducer: {
               WorldClockFeature()
+                ._printChanges()
             }))
               .tabItem {
                 Image(systemName: "globe")

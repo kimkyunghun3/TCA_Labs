@@ -10,9 +10,10 @@ struct WorldClockDetailFeature: Reducer {
     case cancelButtonTapped
     case delegate(Delegate)
     case textDidEdited(title: String)
+    case rowTapped(title: String)
     
     enum Delegate: Equatable {
-      case addLocation
+      case addLocation(title: String)
     }
   }
   
@@ -28,6 +29,11 @@ struct WorldClockDetailFeature: Reducer {
     case let .textDidEdited(title):
       state.location = title
       return .none
+    case let .rowTapped(title):
+      return .run { send in
+        await send(.delegate(.addLocation(title: title)))
+        await dismiss()
+      }
     }
   }
 }
