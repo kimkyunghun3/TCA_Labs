@@ -1,11 +1,15 @@
 import SwiftUI
 
 struct DSButton: View {
-
+  /// 타이틀
   let title: String
+  /// disable 유무
   var disabled: Bool
+  /// cornerRadius
   let cornerRadius: CGFloat
+  /// 배경색
   let backgroundColor: Color
+  /// Tap action
   var tapAction: () -> Void
 
   init(
