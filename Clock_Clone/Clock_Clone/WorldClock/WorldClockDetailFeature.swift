@@ -4,16 +4,17 @@ import ComposableArchitecture
 struct WorldClockDetailFeature: Reducer {
   struct State: Equatable {
     var location: String
+    var cities: [City]
   }
   
   enum Action: Equatable {
     case cancelButtonTapped
     case delegate(Delegate)
     case textDidEdited(title: String)
-    case rowTapped(title: String)
+    case rowTapped(City)
     
     enum Delegate: Equatable {
-      case addLocation(title: String)
+      case addLocation(City)
     }
   }
   
@@ -29,9 +30,9 @@ struct WorldClockDetailFeature: Reducer {
     case let .textDidEdited(title):
       state.location = title
       return .none
-    case let .rowTapped(title):
+    case let .rowTapped(item):
       return .run { send in
-        await send(.delegate(.addLocation(title: title)))
+        await send(.delegate(.addLocation(item)))
         await dismiss()
       }
     }

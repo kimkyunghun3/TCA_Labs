@@ -4,7 +4,6 @@ import Foundation
 struct WorldClockFeature: Reducer {
   struct State: Equatable {
     var clocks: IdentifiedArrayOf<WorldClock> = []
-    let contents = WorldClock.dummy
     @PresentationState var destination: Destination.State?
     var path = StackState<WorldClockDetailFeature.State>()
     var name = ""
@@ -22,7 +21,7 @@ struct WorldClockFeature: Reducer {
     Reduce { state, action in
       switch action {
       case .addButtonTapped:
-        state.destination = .addClock(.init(location: ""))
+        state.destination = .addClock(.init(location: "", cities: []))
         return .none
       case .editButtonTapped:
         return .none
@@ -34,9 +33,9 @@ struct WorldClockFeature: Reducer {
         return .none
       case .path:
         return .none
-      case .destination(.presented(.addClock(.delegate(.addLocation)))):
-        state.name = "data"
-        return .none
+//      case .destination(.presented(.addClock(.delegate(.addLocation)))):
+//        state.name = state.path.first!.location
+//        return .none
       case .destination:
         return .none
       }

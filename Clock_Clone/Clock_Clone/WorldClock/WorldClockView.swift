@@ -8,15 +8,16 @@ struct WorldClockView: View {
     WithViewStore(self.store, observe: { $0 }) { viewStore in
       NavigationStack {
         List {
-          ForEach(viewStore.contents) {
-            WorldClockRow(
-              item: .init(
-                location: $0.location,
-                date: $0.date,
-                standardDate: $0.standardDate
-              )
-            )
-          }
+          WorldClockRow(item: .init(location: viewStore.name, date: viewStore.name, standardDate: viewStore.name))
+//          ForEach(viewStore.name) {
+//            WorldClockRow(
+//              item: .init(
+//                location: $0.name,
+//                date: $0.name,
+//                standardDate: $0.name
+//              )
+//            )
+//          }
         }
         .navigationTitle("세계 시계")
         .toolbar {

@@ -66,3 +66,123 @@ struct City: Equatable, Identifiable {
     .init(name: "홍콩 특별행정구", country: "중국")
   ]
 }
+
+enum WorkldClockDev: Equatable, Identifiable, CaseIterable {
+  case 가보로네
+  case 괌
+  case 과나후아또
+  case 나소
+  case 나이로비
+  case 노바토
+  case 녹스
+  case 다롄
+  case 다카르
+  case 도슨시티
+  case 두바이
+  case 라사
+  case 레온
+  case 마닐라
+  case 마렝고
+  case 바르샤바
+  case 발레이오
+  case 산살바도르
+  case 산타이사벨
+  case 산티아고
+  case 아덴
+  case 아순시온
+  case 캘거리
+  case 케레타로
+  case 톨루카
+  case 헤브론
+  case 휴스턴
+  case 힐즈버그
+  case 호놀룰루
+  case 헤밀턴
+  case 헬싱키
+  case 호치민시티
+  case 홍콩특별행정구
+
+  var id: String {
+    return String(describing: self)
+  }
+
+  var name: String {
+    return String(describing: self)
+  }
+
+  var time: String {
+    return "8:10"
+  }
+
+  var country: String {
+    switch self {
+    case .가보로네:
+      return "보츠와나"
+    case .괌:
+      return "괌"
+    case .과나후아또:
+      return "멕시코"
+    case .나소:
+      return "바하마"
+    case .나이로비:
+      return "캐나다"
+    case .노바토:
+      return "미국"
+    case .녹스:
+      return "미국"
+    case .다롄:
+      return "중국 본토"
+    case .다카르:
+      return "세네갈"
+    case .도슨시티:
+      return "캐나다"
+    case .두바이:
+      return "아랍 에밀리트 연합국"
+    case .라사:
+      return "중국 본토"
+    case .레온:
+      return "멕시코"
+    case .마닐라:
+      return "필리핀"
+    case .마렝고:
+      return "미국"
+    case .바르샤바:
+      return "폴란드"
+    case .발레이오:
+      return "미국"
+    case .산살바도르:
+      return "엘살바도르"
+    case .산타이사벨:
+      return "멕시코"
+    case .산티아고:
+      return "칠레"
+    case .아덴:
+      return "예맨"
+    case .아순시온:
+      return "파라과이"
+    case .캘거리:
+      return "캐나다"
+    case .케레타로:
+      return "미국"
+    case .톨루카:
+      return ""
+    case .헤브론:
+      return "미국"
+    case .휴스턴:
+      return "미국"
+    case .힐즈버그:
+      return "미국"
+    case .호놀룰루:
+      return "버뮤다"
+    case .헤밀턴:
+      return "핀란드"
+    case .헬싱키:
+      return "몽골"
+    case .호치민시티:
+      return "베트남"
+    case .홍콩특별행정구:
+      return "중국"
+    }
+  }
+}
+

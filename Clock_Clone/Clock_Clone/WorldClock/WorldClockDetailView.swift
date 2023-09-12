@@ -3,21 +3,20 @@ import ComposableArchitecture
 
 struct WorldClockDetailView: View {
   let store: StoreOf<WorldClockDetailFeature>
-  let contents = City.data
   
   var body: some View {
     WithViewStore(self.store, observe: { $0 }) { viewStore in
       ScrollView {
         LazyVStack(pinnedViews: [.sectionHeaders]) {
           Section {
-            ForEach(contents) { content in
+            ForEach(viewStore.cities) { content in
               HStack {
                 Text("\(content.name),")
                 Text(content.country ?? "")
                 Spacer()
               }
               .onTapGesture {
-                store.send(.rowTapped(title: content.name))
+                store.send(.rowTapped(content))
               }
               
               .frame(maxWidth: .infinity)
@@ -59,10 +58,10 @@ struct WorldClockDetailView: View {
 }
 
 
-struct WorldClockDetailView_Previews: PreviewProvider {
-  static var previews: some View {
-    WorldClockDetailView(store: .init(initialState: .init(location: "서울")) {
-      WorldClockDetailFeature()
-    })
-  }
-}
+//struct WorldClockDetailView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    WorldClockDetailView(store: .init(initialState: .init(location: "서울")) {
+//      WorldClockDetailFeature()
+//    })
+//  }
+//}
