@@ -1,28 +1,43 @@
 import SwiftUI
 
+extension DSButton {
+  func background(_ color: Color) -> Self {
+    var v = self
+    v.backgroundColor = color
+    return v
+  }
+  
+  func cornerRadius(_ value: CGFloat) -> Self {
+    var v = self
+    v.cornerRadius = value
+    return v
+  }
+  
+  func foreground(_ color: Color) -> Self {
+    var v = self
+    v.foregroundColor = color
+    return v
+  }
+}
+
 struct DSButton: View {
+  @Environment(\.isEnabled) var isEnabled
   /// 타이틀
   let title: String
-  /// disable 유무
-  var disabled: Bool
   /// cornerRadius
-  let cornerRadius: CGFloat
+  var cornerRadius: CGFloat = 15
+  /// 글자색
+  var foregroundColor: Color = .white
   /// 배경색
-  let backgroundColor: Color
+  var backgroundColor: Color = .gray.opacity(0.5)
   /// Tap action
   var tapAction: () -> Void
 
   init(
     title: String,
-    disalbed: Bool = false,
-    backgroundColor: Color,
-    cornerRadius: CGFloat = 15,
     tapAction: @escaping () -> Void = {}
   ) {
     self.title = title
-    self.disabled = disalbed
-    self.backgroundColor = backgroundColor
-    self.cornerRadius = cornerRadius
     self.tapAction = tapAction
   }
 
@@ -33,17 +48,22 @@ struct DSButton: View {
       Text(title)
         .frame(width: 130, height: 52)
         .background(backgroundColor)
-        .foregroundColor(.white)
+        .foregroundColor(foregroundColor)
         .cornerRadius(cornerRadius)
     }
-    .disabled(disabled)
+    .overlay {
+      if isEnabled == false {
+        Color.gray.opacity(0.5)
+      }
+    }
   }
 }
 
 struct DSButton_Previews: PreviewProvider {
   static var previews: some View {
-    DSButton(title: "취소", backgroundColor: Color.gray.opacity(0.5)) {
+    DSButton(title: "취소") {
       print("Tap")
     }
+    .background(.gray.opacity(0.5))
   }
 }
