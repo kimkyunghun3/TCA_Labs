@@ -1,5 +1,50 @@
 import SwiftUI
+///  띄우는 거 + 애니메이션 topview 으로 띄어야함 offset y 로 올려야함
+///  extension
 
+extension View {
+  func popup(
+    title: String,
+    description: String,
+    leftAction: @escaping () -> Void,
+    rightAction: @escaping () -> Void,
+    buttonTitles: [String]
+  ) -> some View {
+    modifier(PopupModifier(title: title, description: description, buttonTitles: buttonTitles, leftAction: leftAction, rightAction: rightAction))
+  }
+}
+
+struct PopupModifier: ViewModifier {
+  let title: String
+  let description: String
+  let buttonTitles: [String]
+  
+  var leftAction: (() -> Void)
+  var rightAction: (() -> Void)
+  
+  func body(content: Content) -> some View {
+    ZStack {
+      content
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+      
+      Color.gray.opacity(0.5)
+        .ignoresSafeArea()
+      
+      DSPopup(
+        title: title,
+        description: description,
+        background: .gray.opacity(0.1),
+        cornerRadius: 15,
+        buttonTitles: buttonTitles
+        ) {
+          leftAction()
+        } rightAction: {
+          rightAction()
+        }
+        .padding(.horizontal, 20)
+    }
+  }
+}
 struct DSPopup: View {
   /// 타이틀
   let title: String
@@ -13,12 +58,10 @@ struct DSPopup: View {
   let cornerRadius: CGFloat
   /// 버튼 타이틀 배열
   var buttonTitles: [String] = []
-  /// 오른쪽 버튼 존재 유무
-  @State private var isRightButtonExist = false
   /// 왼쪽 버튼 액션
   let leftAction: () -> Void
   /// 오른쪽 버튼 액션
-  let rightAction: () -> Void
+  let rightAction: (() -> Void)
   
   init(
     title: String,
@@ -27,7 +70,6 @@ struct DSPopup: View {
     background: Color,
     cornerRadius: CGFloat,
     buttonTitles: [String],
-    isRightButtonExist: Bool,
     leftAction: @escaping () -> Void = {},
     rightAction: @escaping () -> Void = {}
   ) {
@@ -37,13 +79,23 @@ struct DSPopup: View {
     self.background = background
     self.cornerRadius = cornerRadius
     self.buttonTitles = buttonTitles
-    self.isRightButtonExist = isRightButtonExist
     self.leftAction = leftAction
     self.rightAction = rightAction
   }
   
+  @Environment(\.colorScheme) var scheme
+  var backgroundColor: Color {
+    if self.buttonTitles.count == 1 {
+      return .green
+    } else if scheme == .dark {
+      return .white
+    } else {
+      return .gray
+    }
+  }
+  
   var body: some View {
-    VStack {
+    VStack(spacing: 0) {
       Text(title)
         .foregroundColor(.gray.opacity(0.5))
       
@@ -67,11 +119,11 @@ struct DSPopup: View {
           Text(buttonTitles[0])
             .padding(.vertical, 21)
             .frame(maxWidth: .infinity)
-            .background(self.buttonTitles.count == 1 ? .green : .gray)
+            .background(backgroundColor)
             .cornerRadius(15)
         }
         
-        if isRightButtonExist {
+        if self.buttonTitles.count == 2 {
           Button {
             rightAction()
           } label: {
@@ -103,8 +155,8 @@ struct DSPopup_Previews: PreviewProvider {
           description: "설정중이던 진료 조건을 임시저장할까요?",
           background: .gray.opacity(0.1),
           cornerRadius: 15,
-          buttonTitles: ["취소", "확인"],
-          isRightButtonExist: true) {
+          buttonTitles: ["취소", "확인"]
+          ) {
             print("left action")
           } rightAction: {
             print("right action")
@@ -116,8 +168,7 @@ struct DSPopup_Previews: PreviewProvider {
           subDescription: "약 3시간 이내 배송",
           background: .gray.opacity(0.1),
           cornerRadius: 15,
-          buttonTitles: ["확인"],
-          isRightButtonExist: false) {
+          buttonTitles: ["확인"]) {
             print("left action")
           } rightAction: {
             print("right action")
@@ -128,8 +179,7 @@ struct DSPopup_Previews: PreviewProvider {
           description: "진료 과목을 변경하시면 선생님을\n 다시 선택하고 예약을 진행하셔야 합니다\n 그래도 변경하시겠습니까?",
           background: .gray.opacity(0.1),
           cornerRadius: 15,
-          buttonTitles: ["확인"],
-          isRightButtonExist: false) {
+          buttonTitles: ["확인"]) {
             print("left action")
           } rightAction: {
             print("right action")

@@ -2,13 +2,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+      Button("버튼") {
+        
+
+      }
+      .popup(title: "의료진안내", description: "해보세요", leftAction: {
+        
+      }, rightAction: {
+        print("right")
+      }, buttonTitles: ["취소", "확인"])
     }
 }
 
