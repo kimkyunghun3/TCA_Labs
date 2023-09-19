@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		583384DD2AAE954D00CFA947 /* DSPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583384DC2AAE954D00CFA947 /* DSPopup.swift */; };
 		64A7FE002AAC298E0038BADB /* DesignSystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7FDFF2AAC298E0038BADB /* DesignSystemApp.swift */; };
-		64A7FE022AAC298E0038BADB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7FE012AAC298E0038BADB /* ContentView.swift */; };
+		64A7FE022AAC298E0038BADB /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7FE012AAC298E0038BADB /* PopView.swift */; };
 		64A7FE042AAC298F0038BADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A7FE032AAC298F0038BADB /* Assets.xcassets */; };
 		64A7FE072AAC298F0038BADB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A7FE062AAC298F0038BADB /* Preview Assets.xcassets */; };
 		64A7FE0E2AAC29CB0038BADB /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7FE0D2AAC29CB0038BADB /* DSButton.swift */; };
@@ -19,7 +19,7 @@
 		583384DC2AAE954D00CFA947 /* DSPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSPopup.swift; sourceTree = "<group>"; };
 		64A7FDFC2AAC298E0038BADB /* DesignSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A7FDFF2AAC298E0038BADB /* DesignSystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemApp.swift; sourceTree = "<group>"; };
-		64A7FE012AAC298E0038BADB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		64A7FE012AAC298E0038BADB /* PopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopView.swift; sourceTree = "<group>"; };
 		64A7FE032AAC298F0038BADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64A7FE062AAC298F0038BADB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		64A7FE0D2AAC29CB0038BADB /* DSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				64A7FDFF2AAC298E0038BADB /* DesignSystemApp.swift */,
-				64A7FE012AAC298E0038BADB /* ContentView.swift */,
+				64A7FE012AAC298E0038BADB /* PopView.swift */,
 				64A7FE0D2AAC29CB0038BADB /* DSButton.swift */,
 				583384DC2AAE954D00CFA947 /* DSPopup.swift */,
 				64A7FE032AAC298F0038BADB /* Assets.xcassets */,
@@ -143,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64A7FE022AAC298E0038BADB /* ContentView.swift in Sources */,
+				64A7FE022AAC298E0038BADB /* PopView.swift in Sources */,
 				64A7FE0E2AAC29CB0038BADB /* DSButton.swift in Sources */,
 				64A7FE002AAC298E0038BADB /* DesignSystemApp.swift in Sources */,
 				583384DD2AAE954D00CFA947 /* DSPopup.swift in Sources */,

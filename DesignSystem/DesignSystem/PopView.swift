@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct PopView: View {
     var body: some View {
       Button("버튼") {
         
@@ -16,6 +16,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+      PopView()
     }
 }
