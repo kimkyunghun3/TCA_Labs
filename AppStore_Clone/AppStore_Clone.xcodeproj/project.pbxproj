@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		583132282AC145B9002D9FA4 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 583132272AC145B9002D9FA4 /* FlexLayout */; };
+		5831322A2AC145B9002D9FA4 /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = 583132292AC145B9002D9FA4 /* FlexLayoutYoga */; };
+		5831322C2AC145B9002D9FA4 /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5831322B2AC145B9002D9FA4 /* FlexLayoutYogaKit */; };
 		587B69732AC1411200CAA09C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B69722AC1411200CAA09C /* AppDelegate.swift */; };
 		587B69752AC1411200CAA09C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B69742AC1411200CAA09C /* SceneDelegate.swift */; };
 		587B69772AC1411200CAA09C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B69762AC1411200CAA09C /* ViewController.swift */; };
-		587B697A2AC1411200CAA09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587B69782AC1411200CAA09C /* Main.storyboard */; };
 		587B697C2AC1411300CAA09C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587B697B2AC1411300CAA09C /* Assets.xcassets */; };
 		587B697F2AC1411300CAA09C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587B697D2AC1411300CAA09C /* LaunchScreen.storyboard */; };
-		587B69882AC1412D00CAA09C /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 587B69872AC1412D00CAA09C /* FlexLayout */; };
 		587B698B2AC1414500CAA09C /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 587B698A2AC1414500CAA09C /* PinLayout */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +23,6 @@
 		587B69722AC1411200CAA09C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		587B69742AC1411200CAA09C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		587B69762AC1411200CAA09C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		587B69792AC1411200CAA09C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		587B697B2AC1411300CAA09C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		587B697E2AC1411300CAA09C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		587B69802AC1411300CAA09C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,7 +34,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				587B698B2AC1414500CAA09C /* PinLayout in Frameworks */,
-				587B69882AC1412D00CAA09C /* FlexLayout in Frameworks */,
+				583132282AC145B9002D9FA4 /* FlexLayout in Frameworks */,
+				5831322C2AC145B9002D9FA4 /* FlexLayoutYogaKit in Frameworks */,
+				5831322A2AC145B9002D9FA4 /* FlexLayoutYoga in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +65,6 @@
 				587B69722AC1411200CAA09C /* AppDelegate.swift */,
 				587B69742AC1411200CAA09C /* SceneDelegate.swift */,
 				587B69762AC1411200CAA09C /* ViewController.swift */,
-				587B69782AC1411200CAA09C /* Main.storyboard */,
 				587B697B2AC1411300CAA09C /* Assets.xcassets */,
 				587B697D2AC1411300CAA09C /* LaunchScreen.storyboard */,
 				587B69802AC1411300CAA09C /* Info.plist */,
@@ -88,8 +89,10 @@
 			);
 			name = AppStore_Clone;
 			packageProductDependencies = (
-				587B69872AC1412D00CAA09C /* FlexLayout */,
 				587B698A2AC1414500CAA09C /* PinLayout */,
+				583132272AC145B9002D9FA4 /* FlexLayout */,
+				583132292AC145B9002D9FA4 /* FlexLayoutYoga */,
+				5831322B2AC145B9002D9FA4 /* FlexLayoutYogaKit */,
 			);
 			productName = AppStore_Clone;
 			productReference = 587B696F2AC1411200CAA09C /* AppStore_Clone.app */;
@@ -120,8 +123,8 @@
 			);
 			mainGroup = 587B69662AC1411200CAA09C;
 			packageReferences = (
-				587B69862AC1412D00CAA09C /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				587B69892AC1414500CAA09C /* XCRemoteSwiftPackageReference "PinLayout" */,
+				583132262AC145B9002D9FA4 /* XCRemoteSwiftPackageReference "FlexLayout" */,
 			);
 			productRefGroup = 587B69702AC1411200CAA09C /* Products */;
 			projectDirPath = "";
@@ -139,7 +142,6 @@
 			files = (
 				587B697F2AC1411300CAA09C /* LaunchScreen.storyboard in Resources */,
 				587B697C2AC1411300CAA09C /* Assets.xcassets in Resources */,
-				587B697A2AC1411200CAA09C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,14 +161,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		587B69782AC1411200CAA09C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				587B69792AC1411200CAA09C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		587B697D2AC1411300CAA09C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -222,6 +216,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "FLEXLAYOUT_SWIFT_PACKAGE=1 ";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -304,7 +299,6 @@
 				INFOPLIST_FILE = AppStore_Clone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -314,9 +308,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "test.AppStore-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +329,6 @@
 				INFOPLIST_FILE = AppStore_Clone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -342,9 +338,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "test.AppStore-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -372,7 +371,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		587B69862AC1412D00CAA09C /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+		583132262AC145B9002D9FA4 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/layoutBox/FlexLayout.git";
 			requirement = {
@@ -391,10 +390,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		587B69872AC1412D00CAA09C /* FlexLayout */ = {
+		583132272AC145B9002D9FA4 /* FlexLayout */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 587B69862AC1412D00CAA09C /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			package = 583132262AC145B9002D9FA4 /* XCRemoteSwiftPackageReference "FlexLayout" */;
 			productName = FlexLayout;
+		};
+		583132292AC145B9002D9FA4 /* FlexLayoutYoga */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 583132262AC145B9002D9FA4 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayoutYoga;
+		};
+		5831322B2AC145B9002D9FA4 /* FlexLayoutYogaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 583132262AC145B9002D9FA4 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayoutYogaKit;
 		};
 		587B698A2AC1414500CAA09C /* PinLayout */ = {
 			isa = XCSwiftPackageProductDependency;
