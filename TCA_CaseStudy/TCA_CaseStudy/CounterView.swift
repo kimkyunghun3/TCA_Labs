@@ -3,9 +3,15 @@ import ComposableArchitecture
 
 struct CounterView: View {
   let store: StoreOf<CounterCore>
+  @ObservedObject var viewStore: ViewStoreOf<CounterCore>
+  
+  init(store: StoreOf<CounterCore>) {
+    self.store = store
+    self.viewStore = ViewStore(self.store, observe: { $0 })
+  }
   
   var body: some View {
-    WithViewStore(self.store, observe: { $0 }) { viewStore in
+    VStack {
       HStack {
         Button("-") {
           viewStore.send(.decrementButtonTapped)
@@ -17,7 +23,13 @@ struct CounterView: View {
       }
     }
   }
-}
+  
+  var buttons: some View {
+      Button("gg") {
+        viewStore.send(.incrementButtonTapped)
+      }
+    }
+  }
 
 struct CounterView_Previews: PreviewProvider {
   static var previews: some View {

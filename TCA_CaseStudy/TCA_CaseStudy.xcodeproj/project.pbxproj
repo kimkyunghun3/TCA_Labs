@@ -13,6 +13,7 @@
 		58B485DC2ADE22320084A849 /* CounterCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B485DB2ADE22320084A849 /* CounterCore.swift */; };
 		58B485DE2ADE22AA0084A849 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B485DD2ADE22AA0084A849 /* CounterView.swift */; };
 		58B485E12ADE23A30084A849 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 58B485E02ADE23A30084A849 /* ComposableArchitecture */; };
+		58B485E32ADE38760084A849 /* DoubleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B485E22ADE38760084A849 /* DoubleCounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		58B485D42ADE1FAF0084A849 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58B485DB2ADE22320084A849 /* CounterCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterCore.swift; sourceTree = "<group>"; };
 		58B485DD2ADE22AA0084A849 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		58B485E22ADE38760084A849 /* DoubleCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				58B485CD2ADE1FAE0084A849 /* TCA_CaseStudyApp.swift */,
 				58B485DB2ADE22320084A849 /* CounterCore.swift */,
 				58B485DD2ADE22AA0084A849 /* CounterView.swift */,
+				58B485E22ADE38760084A849 /* DoubleCounterView.swift */,
 				58B485D12ADE1FAF0084A849 /* Assets.xcassets */,
 				58B485D32ADE1FAF0084A849 /* Preview Content */,
 			);
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B485E32ADE38760084A849 /* DoubleCounterView.swift in Sources */,
 				58B485DC2ADE22320084A849 /* CounterCore.swift in Sources */,
 				58B485CE2ADE1FAE0084A849 /* TCA_CaseStudyApp.swift in Sources */,
 				58B485DE2ADE22AA0084A849 /* CounterView.swift in Sources */,
