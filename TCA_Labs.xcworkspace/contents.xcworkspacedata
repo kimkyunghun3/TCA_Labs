@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TCA_CaseStudy/TCA_CaseStudy.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AppStore_Clone/AppStore_Clone.xcodeproj">
    </FileRef>
    <FileRef
