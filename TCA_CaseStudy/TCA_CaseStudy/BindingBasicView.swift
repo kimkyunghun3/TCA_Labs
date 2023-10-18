@@ -15,6 +15,7 @@ struct BindingBasicCore: Reducer {
     case decrementButtonTapped
     case incrementButtonTapped
     case sliderDidEdited(Double)
+    case resetButtonTapped
   }
   
   var body: some ReducerOf<Self> {
@@ -34,6 +35,12 @@ struct BindingBasicCore: Reducer {
         return .none
       case let .sliderDidEdited(value):
         state.sliderValue = value
+        return .none
+      case .resetButtonTapped:
+        state.name = ""
+        state.isDisable = false
+        state.maxSliderValue = 10
+        state.sliderValue = 5.0
         return .none
       }
     }
@@ -92,6 +99,13 @@ struct BindingBasicView: View {
                in: 0...Double(viewStore.maxSliderValue)
             )
         .disabled(viewStore.isDisable)
+      }
+      HStack {
+        Button("Reset") {
+          viewStore.send(.resetButtonTapped)
+        }
+        .foregroundColor(.red)
+        Spacer()
       }
     }
     .padding()
