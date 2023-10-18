@@ -37,10 +37,7 @@ struct BindingBasicCore: Reducer {
         state.sliderValue = value
         return .none
       case .resetButtonTapped:
-        state.name = ""
-        state.isDisable = false
-        state.maxSliderValue = 10
-        state.sliderValue = 5.0
+        state = State()
         return .none
       }
     }
