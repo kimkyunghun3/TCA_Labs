@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		580979CC2ADF5377009E1F81 /* BindingBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580979CB2ADF5377009E1F81 /* BindingBasicView.swift */; };
 		580979CE2ADF99CA009E1F81 /* OptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580979CD2ADF99CA009E1F81 /* OptionalView.swift */; };
+		585824BD2AE258520047DDD4 /* AlertDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585824BC2AE258520047DDD4 /* AlertDialogView.swift */; };
 		58B485CE2ADE1FAE0084A849 /* TCA_CaseStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B485CD2ADE1FAE0084A849 /* TCA_CaseStudyApp.swift */; };
 		58B485D22ADE1FAF0084A849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B485D12ADE1FAF0084A849 /* Assets.xcassets */; };
 		58B485D52ADE1FAF0084A849 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B485D42ADE1FAF0084A849 /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		580979CB2ADF5377009E1F81 /* BindingBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicView.swift; sourceTree = "<group>"; };
 		580979CD2ADF99CA009E1F81 /* OptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalView.swift; sourceTree = "<group>"; };
+		585824BC2AE258520047DDD4 /* AlertDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogView.swift; sourceTree = "<group>"; };
 		58B485CA2ADE1FAE0084A849 /* TCA_CaseStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCA_CaseStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B485CD2ADE1FAE0084A849 /* TCA_CaseStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_CaseStudyApp.swift; sourceTree = "<group>"; };
 		58B485D12ADE1FAF0084A849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				580979CB2ADF5377009E1F81 /* BindingBasicView.swift */,
 				580979CD2ADF99CA009E1F81 /* OptionalView.swift */,
 				58B485D12ADE1FAF0084A849 /* Assets.xcassets */,
+				585824BC2AE258520047DDD4 /* AlertDialogView.swift */,
 				58B485D32ADE1FAF0084A849 /* Preview Content */,
 			);
 			path = TCA_CaseStudy;
@@ -159,6 +162,7 @@
 			files = (
 				580979CE2ADF99CA009E1F81 /* OptionalView.swift in Sources */,
 				58B485E32ADE38760084A849 /* DoubleCounterView.swift in Sources */,
+				585824BD2AE258520047DDD4 /* AlertDialogView.swift in Sources */,
 				580979CC2ADF5377009E1F81 /* BindingBasicView.swift in Sources */,
 				58B485DC2ADE22320084A849 /* CounterCore.swift in Sources */,
 				58B485CE2ADE1FAE0084A849 /* TCA_CaseStudyApp.swift in Sources */,
