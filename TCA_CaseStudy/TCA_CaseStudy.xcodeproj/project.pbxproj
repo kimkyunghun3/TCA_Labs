@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58064BD42AE6057300F57552 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BD32AE6057300F57552 /* FocusView.swift */; };
 		580979CC2ADF5377009E1F81 /* BindingBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580979CB2ADF5377009E1F81 /* BindingBasicView.swift */; };
 		580979CE2ADF99CA009E1F81 /* OptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580979CD2ADF99CA009E1F81 /* OptionalView.swift */; };
 		585824BD2AE258520047DDD4 /* AlertDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585824BC2AE258520047DDD4 /* AlertDialogView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58064BD32AE6057300F57552 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		580979CB2ADF5377009E1F81 /* BindingBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicView.swift; sourceTree = "<group>"; };
 		580979CD2ADF99CA009E1F81 /* OptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalView.swift; sourceTree = "<group>"; };
 		585824BC2AE258520047DDD4 /* AlertDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				580979CD2ADF99CA009E1F81 /* OptionalView.swift */,
 				58B485D12ADE1FAF0084A849 /* Assets.xcassets */,
 				585824BC2AE258520047DDD4 /* AlertDialogView.swift */,
+				58064BD32AE6057300F57552 /* FocusView.swift */,
 				58B485D32ADE1FAF0084A849 /* Preview Content */,
 			);
 			path = TCA_CaseStudy;
@@ -162,6 +165,7 @@
 			files = (
 				580979CE2ADF99CA009E1F81 /* OptionalView.swift in Sources */,
 				58B485E32ADE38760084A849 /* DoubleCounterView.swift in Sources */,
+				58064BD42AE6057300F57552 /* FocusView.swift in Sources */,
 				585824BD2AE258520047DDD4 /* AlertDialogView.swift in Sources */,
 				580979CC2ADF5377009E1F81 /* BindingBasicView.swift in Sources */,
 				58B485DC2ADE22320084A849 /* CounterCore.swift in Sources */,
