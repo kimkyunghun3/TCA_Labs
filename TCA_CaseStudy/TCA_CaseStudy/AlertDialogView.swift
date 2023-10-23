@@ -5,22 +5,29 @@ struct AlertCore: Reducer {
   struct State: Equatable {
     var count = 0
     @PresentationState var alert: AlertState<Action.Alert>?
+    @PresentationState var confimataionDialog: ConfirmationDialogState<Action.ConfirmationDialog>?
   }
   
   enum Action: Equatable {
     case alert(PresentationAction<Alert>)
     case alertButtonTapped
-    case dialogButtonTapped
+    case confirmationDialogButtonTapped
+    case confirmationDialog(PresentationAction<ConfirmationDialog>)
     
     enum Alert: Equatable {
       case incrementButtonTapped
+    }
+    
+    enum ConfirmationDialog: Equatable {
+      case incrementButtonTapped
+      case decrementButtonTapped
     }
   }
   
   var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-      case .alert(.presented(.incrementButtonTapped)):
+      case .alert(.presented(.incrementButtonTapped)), .confirmationDialog(.presented(.incrementButtonTapped)):
         state.alert = AlertState { TextState("Incremented") }
         state.count += 1
         return .none
@@ -40,11 +47,32 @@ struct AlertCore: Reducer {
           TextState("This is an alert")
         }
         return .none
-      case .dialogButtonTapped:
+      case .confirmationDialog(.presented(.decrementButtonTapped)):
+        state.alert = AlertState { TextState("Decremented") }
+        state.count -= 1
+        return .none
+      case .confirmationDialog:
+        return .none
+      case .confirmationDialogButtonTapped:
+        state.confimataionDialog = ConfirmationDialogState(title: {
+          TextState("Confirmation dialog") }, actions: {
+            ButtonState(role: .cancel) {
+              TextState("Cancel")
+            }
+            ButtonState(action: .incrementButtonTapped) {
+              TextState("Increment")
+            }
+            ButtonState(action: .decrementButtonTapped) {
+              TextState("Decrement")
+            }
+          }, message: {
+            TextState("This is a confirmation dialog.")
+          })
         return .none
       }
     }
     .ifLet(\.$alert, action: /Action.alert)
+    .ifLet(\.$confimataionDialog, action: /Action.confirmationDialog)
   }
 }
 
@@ -63,12 +91,13 @@ struct AlertDialogView: View {
         viewStore.send(.alertButtonTapped)
       }
       Button("Confirmation Dialog") {
-        
+        viewStore.send(.confirmationDialogButtonTapped)
       }
     }
     .padding()
     .frame(maxWidth: .infinity, alignment: .leading)
     .alert(store: self.store.scope(state: \.$alert, action: { .alert($0) }))
+    .confirmationDialog(store: self.store.scope(state: \.$confimataionDialog, action: { .confirmationDialog($0) }))
   }
 }
 
