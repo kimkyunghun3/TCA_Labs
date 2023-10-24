@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58064BD42AE6057300F57552 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BD32AE6057300F57552 /* FocusView.swift */; };
+		58064BDA2AE7A1DE00F57552 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BD92AE7A1DE00F57552 /* AnimationView.swift */; };
 		580979CC2ADF5377009E1F81 /* BindingBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580979CB2ADF5377009E1F81 /* BindingBasicView.swift */; };
 		580979CE2ADF99CA009E1F81 /* OptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580979CD2ADF99CA009E1F81 /* OptionalView.swift */; };
 		585824BD2AE258520047DDD4 /* AlertDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585824BC2AE258520047DDD4 /* AlertDialogView.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		58064BD32AE6057300F57552 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
+		58064BD92AE7A1DE00F57552 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		580979CB2ADF5377009E1F81 /* BindingBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicView.swift; sourceTree = "<group>"; };
 		580979CD2ADF99CA009E1F81 /* OptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalView.swift; sourceTree = "<group>"; };
 		585824BC2AE258520047DDD4 /* AlertDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				58B485CD2ADE1FAE0084A849 /* TCA_CaseStudyApp.swift */,
+				58064BD92AE7A1DE00F57552 /* AnimationView.swift */,
 				58B485DB2ADE22320084A849 /* CounterCore.swift */,
 				58B485DD2ADE22AA0084A849 /* CounterView.swift */,
 				58B485E22ADE38760084A849 /* DoubleCounterView.swift */,
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				580979CE2ADF99CA009E1F81 /* OptionalView.swift in Sources */,
+				58064BDA2AE7A1DE00F57552 /* AnimationView.swift in Sources */,
 				58B485E32ADE38760084A849 /* DoubleCounterView.swift in Sources */,
 				58064BD42AE6057300F57552 /* FocusView.swift in Sources */,
 				585824BD2AE258520047DDD4 /* AlertDialogView.swift in Sources */,
