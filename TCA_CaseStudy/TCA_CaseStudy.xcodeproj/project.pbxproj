@@ -12,6 +12,7 @@
 		58064BDC2AE8A5F000F57552 /* EffectBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BDB2AE8A5F000F57552 /* EffectBasicView.swift */; };
 		58064BDE2AE8B0AB00F57552 /* FactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BDD2AE8B0AB00F57552 /* FactClient.swift */; };
 		58064BE02AE8D20500F57552 /* CancellationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BDF2AE8D20500F57552 /* CancellationView.swift */; };
+		58064BE32AE8F46A00F57552 /* NavigatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BE22AE8F46A00F57552 /* NavigatingView.swift */; };
 		580979CC2ADF5377009E1F81 /* BindingBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580979CB2ADF5377009E1F81 /* BindingBasicView.swift */; };
 		580979CE2ADF99CA009E1F81 /* OptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580979CD2ADF99CA009E1F81 /* OptionalView.swift */; };
 		585824BD2AE258520047DDD4 /* AlertDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585824BC2AE258520047DDD4 /* AlertDialogView.swift */; };
@@ -30,6 +31,7 @@
 		58064BDB2AE8A5F000F57552 /* EffectBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectBasicView.swift; sourceTree = "<group>"; };
 		58064BDD2AE8B0AB00F57552 /* FactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactClient.swift; sourceTree = "<group>"; };
 		58064BDF2AE8D20500F57552 /* CancellationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellationView.swift; sourceTree = "<group>"; };
+		58064BE22AE8F46A00F57552 /* NavigatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatingView.swift; sourceTree = "<group>"; };
 		580979CB2ADF5377009E1F81 /* BindingBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicView.swift; sourceTree = "<group>"; };
 		580979CD2ADF99CA009E1F81 /* OptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalView.swift; sourceTree = "<group>"; };
 		585824BC2AE258520047DDD4 /* AlertDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				58064BDB2AE8A5F000F57552 /* EffectBasicView.swift */,
 				58064BDD2AE8B0AB00F57552 /* FactClient.swift */,
 				58064BDF2AE8D20500F57552 /* CancellationView.swift */,
+				58064BE22AE8F46A00F57552 /* NavigatingView.swift */,
 				58B485DB2ADE22320084A849 /* CounterCore.swift */,
 				58B485DD2ADE22AA0084A849 /* CounterView.swift */,
 				58B485E22ADE38760084A849 /* DoubleCounterView.swift */,
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58064BE32AE8F46A00F57552 /* NavigatingView.swift in Sources */,
 				58064BDE2AE8B0AB00F57552 /* FactClient.swift in Sources */,
 				580979CE2ADF99CA009E1F81 /* OptionalView.swift in Sources */,
 				58064BDA2AE7A1DE00F57552 /* AnimationView.swift in Sources */,
