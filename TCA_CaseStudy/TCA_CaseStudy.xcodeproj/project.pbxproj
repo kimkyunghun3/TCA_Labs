@@ -13,6 +13,7 @@
 		58064BDE2AE8B0AB00F57552 /* FactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BDD2AE8B0AB00F57552 /* FactClient.swift */; };
 		58064BE02AE8D20500F57552 /* CancellationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BDF2AE8D20500F57552 /* CancellationView.swift */; };
 		58064BE32AE8F46A00F57552 /* NavigatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BE22AE8F46A00F57552 /* NavigatingView.swift */; };
+		58064BE52AE8FC3F00F57552 /* BasicNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BE42AE8FC3F00F57552 /* BasicNaviView.swift */; };
 		58064BE82AEA20A600F57552 /* BasicPresentNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BE72AEA20A600F57552 /* BasicPresentNaviView.swift */; };
 		58064BEA2AEA23CB00F57552 /* BasicPresentLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BE92AEA23CB00F57552 /* BasicPresentLoadView.swift */; };
 		58064BEC2AEA293000F57552 /* MultipleDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58064BEB2AEA293000F57552 /* MultipleDestinations.swift */; };
@@ -36,6 +37,7 @@
 		58064BDD2AE8B0AB00F57552 /* FactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactClient.swift; sourceTree = "<group>"; };
 		58064BDF2AE8D20500F57552 /* CancellationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellationView.swift; sourceTree = "<group>"; };
 		58064BE22AE8F46A00F57552 /* NavigatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatingView.swift; sourceTree = "<group>"; };
+		58064BE42AE8FC3F00F57552 /* BasicNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNaviView.swift; sourceTree = "<group>"; };
 		58064BE72AEA20A600F57552 /* BasicPresentNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPresentNaviView.swift; sourceTree = "<group>"; };
 		58064BE92AEA23CB00F57552 /* BasicPresentLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPresentLoadView.swift; sourceTree = "<group>"; };
 		58064BEB2AEA293000F57552 /* MultipleDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleDestinations.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				58064BDF2AE8D20500F57552 /* CancellationView.swift */,
 				58064BE22AE8F46A00F57552 /* NavigatingView.swift */,
 				588173342AEB2D99006D9882 /* ReusableFavoritingView.swift */,
+				58064BE42AE8FC3F00F57552 /* BasicNaviView.swift */,
 				58064BE92AEA23CB00F57552 /* BasicPresentLoadView.swift */,
 				58064BEB2AEA293000F57552 /* MultipleDestinations.swift */,
 				58064BE72AEA20A600F57552 /* BasicPresentNaviView.swift */,
@@ -194,6 +197,7 @@
 				58064BDE2AE8B0AB00F57552 /* FactClient.swift in Sources */,
 				580979CE2ADF99CA009E1F81 /* OptionalView.swift in Sources */,
 				58064BEA2AEA23CB00F57552 /* BasicPresentLoadView.swift in Sources */,
+				58064BE82AEA20A600F57552 /* BasicPresentNaviView.swift in Sources */,
 				58064BDA2AE7A1DE00F57552 /* AnimationView.swift in Sources */,
 				58B485E32ADE38760084A849 /* DoubleCounterView.swift in Sources */,
 				58064BD42AE6057300F57552 /* FocusView.swift in Sources */,
