@@ -38,6 +38,7 @@ struct TodosCore: Reducer {
   enum CancelID { case todoCompletion }
   
   var body: some ReducerOf<Self> {
+    BindingReducer()
     Reduce { state, action in
       switch action {
       case .editButtonTapped:
@@ -120,8 +121,18 @@ struct TodosView: View {
   }
 }
 
+extension IdentifiedArray where ID == TodoCore.State.ID, Element == TodoCore.State {
+  static let mock: Self = [
+    TodoCore.State(text: "Check mail", isCompleted: false, id: UUID()),
+    TodoCore.State(text: "Check Buy Milk", isCompleted: false, id: UUID()),
+    TodoCore.State(text: "Call Bro", isCompleted: true, id: UUID())
+  ]
+}
+
+
 #Preview {
-  TodosView(store: .init(initialState: .init(), reducer: {
+  TodosView(store: Store(initialState: TodosCore.State(todos: .mock)) {
     TodosCore()
-  }))
+  }
+  )
 }

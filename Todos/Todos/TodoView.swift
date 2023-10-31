@@ -37,12 +37,13 @@ struct TodoView: View {
 
         TextField("Untitled Todo", text: viewStore.$text)
       }
-      .foregroundStyle(viewStore.isCompleted ? .gray : .white)
+      .padding()
+      .foregroundStyle(viewStore.isCompleted ? .gray : .black)
     }
 }
 
-//#Preview {
-//  TodoView(store: .init(initialState: .init(id: UUID()), reducer: {
-//    TodoCore()
-//  }))
-//}
+#Preview {
+  TodoView(store: .init(initialState: .init(id: UUID()), reducer: {
+    TodoCore()
+  }))
+}
